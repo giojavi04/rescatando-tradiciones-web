@@ -16,18 +16,18 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Rescatando tradiciones`,
+        short_name: `R.T.`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#F6F6EE`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon-rescatando-tradiciones.png`, // This path is relative to the root of the site.
       },
     },
     {
