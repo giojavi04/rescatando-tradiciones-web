@@ -6,8 +6,9 @@
 
 // You can delete this file if you're not using it
 const React = require('react')
-const Layout = require('./src/components/layout').default
-require('./src/components/syles/styles.css')
+const Layout = require('./src/components/Layaout').Layout
+console.log(Layout)
+require('./src/syles/styles.css')
 
 exports.wrapRootElement = ({ element }) => (
   <Layout>
