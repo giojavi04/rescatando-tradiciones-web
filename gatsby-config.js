@@ -30,13 +30,6 @@ module.exports = {
         icon: `src/images/icon-rescatando-tradiciones.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
-      options: {
-        printRejected: true,
-        develop: true, // Activates purging in npm run develop
-      },
-    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
