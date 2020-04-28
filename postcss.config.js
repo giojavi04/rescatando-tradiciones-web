@@ -14,6 +14,6 @@ module.exports = {
       ]
       : []),
     require("postcss-preset-env"),
-    // require("autoprefixer")
+    require("autoprefixer")
   ],
 }
