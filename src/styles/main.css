@@ -15,5 +15,5 @@
 @tailwind utilities;
 
 body {
-  @apply .bg-rt-background;
+  @apply bg-rt-background;
 }

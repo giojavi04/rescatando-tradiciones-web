@@ -20,8 +20,8 @@ const Header = () => (
         </button>
       </div>
 
-      <div className="w-full lg:flex lg:items-center px-2">
-        <nav className="bg-gray-900 hidden lg:bg-transparent lg:flex lg:items-center lg:w-auto z-20" id="nav-content">
+      <div className="w-full flex-col lg:w-auto lg:flex lg:flex-auto lg:items-center px-2">
+        <nav className="w-full bg-gray-900 hidden lg:bg-transparent lg:flex lg:items-center z-20" id="nav-content">
           <ul className="text-white list-reset lg:flex justify-end flex-1 items-center">
             <li className="lg:mr-3">
               <a className="inline-block w-full py-6 px-4" href="#">Nosotros</a>
@@ -40,7 +40,7 @@ const Header = () => (
             </li>
           </ul>
         </nav>
-        <div>
+        <div className="w-full">
           <div className="flex items-center">
             <h5 className="flex-initial mr-2 italic font-light text-xl md:text-2xl">Colectivo</h5>
             <hr className="flex-auto border-b border-rt-primary my-0 py-0" />
