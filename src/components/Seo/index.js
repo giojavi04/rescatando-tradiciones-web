@@ -69,7 +69,7 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
       bodyAttributes={{
-        class: 'rt-bg'
+        class: 'RT'
       }}
     />
   )
