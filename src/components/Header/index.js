@@ -1,8 +1,9 @@
 import { Link } from "gatsby"
 import React from "react"
+import PropTypes from "prop-types"
 import Image from '../Image'
 
-const Header = () => (
+const Header = ({ siteTitle }) => (
   <header className="w-full z-30 top-0">
     <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 lg:pt-10">
       <div className="pl-4 flex items-center my-2">
@@ -46,7 +47,7 @@ const Header = () => (
             <hr className="flex-auto border-b border-rt-primary my-0 py-0" />
           </div>
           <div className="text-center mb-4 mt-1">
-            <h2 className="text-rt-primary font-black text-3xl md:text-4xl lg:text-6xl">Rescatando Tradiciones</h2>
+            <h2 className="text-rt-primary font-black text-3xl md:text-5xl lg:text-6xl">{siteTitle}</h2>
           </div>
           <hr className="border-rt-primary my-0 py-0" />
           <div className="text-right my-4">
@@ -58,5 +59,13 @@ const Header = () => (
     </div>
   </header>
 )
+
+Header.propTypes = {
+  siteTitle: PropTypes.string,
+}
+
+Header.defaultProps = {
+  siteTitle: ``,
+}
 
 export default Header
