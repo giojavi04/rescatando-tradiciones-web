@@ -6,7 +6,7 @@ import Image from '../Image'
 const Header = ({ siteTitle }) => (
   <header className="w-full z-30 top-0">
     <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 lg:pt-10">
-      <div className="pl-4 flex items-center my-2">
+      <div className="pl-4 lg:pl-0 flex items-center my-2">
         <Link
           className="w-10 lg:w-40 lg:mr-6"
           to="/"
