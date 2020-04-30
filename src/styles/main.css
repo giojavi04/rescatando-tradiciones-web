@@ -17,3 +17,7 @@
 body {
   @apply bg-rt-background;
 }
+
+.footerRT {
+  background-image: url("../images/footer-bg-rescatando-tradiciones.png");
+}
