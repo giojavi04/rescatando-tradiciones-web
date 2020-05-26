@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
