@@ -5,6 +5,6 @@
  */
 
 // You can delete this file if you're not using it
-import { RootElement as wrapRootElement } from './rootElement'
+import { RootElement as wrapRootElement } from "./rootElement"
 
 export { wrapRootElement }

@@ -1,24 +1,33 @@
 import { Link } from "gatsby"
 import React from "react"
 import Image from "../Image"
+import {
+  Header as HeaderElement,
+  HeaderContainer,
+  HeaderLogoContainer,
+  HeaderBtnMobile,
+  HeaderDescriptionContainer,
+  HeaderNav,
+  HeaderNavUl,
+} from "./styles"
 
 interface Props {
   siteTitle: string
 }
 
 const Header = ({ siteTitle }: Props) => (
-  <header className="w-full z-30 top-0">
-    <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 lg:pt-10">
-      <div className="pl-4 lg:pl-0 flex items-center my-2">
+  <HeaderElement>
+    <HeaderContainer>
+      <HeaderLogoContainer>
         <Link className="w-10 lg:w-40 lg:mr-6" to="/">
           <Image
             nameImage="logo-rescatando-tradiciones.png"
             alt="Rescatando tradiciones"
           />
         </Link>
-      </div>
+      </HeaderLogoContainer>
 
-      <div className="block lg:hidden pr-4">
+      <HeaderBtnMobile>
         <button
           id="nav-toggle"
           className="flex items-center p-1 text-rt-secondary"
@@ -32,14 +41,11 @@ const Header = ({ siteTitle }: Props) => (
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </button>
-      </div>
+      </HeaderBtnMobile>
 
-      <div className="w-full flex-col lg:w-auto lg:flex lg:flex-auto lg:items-center px-2 py-4 lg:py-0">
-        <nav
-          className="w-full bg-gray-900 hidden z-20 lg:bg-transparent lg:flex lg:items-center lg:-mb-5"
-          id="nav-content"
-        >
-          <ul className="text-white lg:text-rt-secondary list-reset lg:flex justify-end flex-1 items-center">
+      <HeaderDescriptionContainer>
+        <HeaderNav id="nav-content">
+          <HeaderNavUl>
             <li>
               <a className="inline-block w-full py-6 px-4 lg:py-2" href="#">
                 Nosotros
@@ -63,8 +69,8 @@ const Header = ({ siteTitle }: Props) => (
                 Contacto
               </a>
             </li>
-          </ul>
-        </nav>
+          </HeaderNavUl>
+        </HeaderNav>
         <div className="w-full">
           <div className="flex items-center">
             <h5 className="flex-initial mr-2 italic font-light text-xl md:text-2xl">
@@ -85,9 +91,9 @@ const Header = ({ siteTitle }: Props) => (
           </div>
           <hr className="border-rt-primary my-0 py-0" />
         </div>
-      </div>
-    </div>
-  </header>
+      </HeaderDescriptionContainer>
+    </HeaderContainer>
+  </HeaderElement>
 )
 
 export default Header

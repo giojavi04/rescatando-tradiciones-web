@@ -37,9 +37,11 @@ const Image = ({ nameImage, alt }: Props) => {
     }
   `)
 
-  const image = data.images.edges.find(n => {
-    return n.node.relativePath.includes(nameImage)
-  })
+  const image = data.images.edges.find(
+    (n: { node: { relativePath: string | string[] } }) => {
+      return n.node.relativePath.includes(nameImage)
+    }
+  )
 
   return <Img fluid={image.node.childImageSharp.fluid} alt={alt} />
 }
