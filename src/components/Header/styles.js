@@ -24,5 +24,5 @@ export const HeaderNav = styled.nav`
   ${tw`w-full bg-gray-900 hidden z-20 lg:bg-transparent lg:flex lg:items-center lg:-mb-5`};
 `
 export const HeaderNavUl = styled.ul`
-  ${tw`text-white lg:text-rt-secondary list-reset lg:flex justify-end flex-1 items-center`};
+  ${tw`text-white lg:text-rt-secondary lg:flex justify-end flex-1 items-center`};
 `

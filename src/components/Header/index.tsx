@@ -45,7 +45,7 @@ const Header = ({ siteTitle }: Props) => (
 
       <HeaderDescriptionContainer>
         <HeaderNav id="nav-content">
-          <HeaderNavUl>
+          <HeaderNavUl className="list-reset">
             <li>
               <a className="inline-block w-full py-6 px-4 lg:py-2" href="#">
                 Nosotros
