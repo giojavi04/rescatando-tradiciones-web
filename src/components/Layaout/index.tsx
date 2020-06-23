@@ -14,6 +14,10 @@ interface Props {
   children: ReactNode
 }
 
+/**
+ * Main layout
+ * @param param0
+ */
 export const Layout = ({ children }: Props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

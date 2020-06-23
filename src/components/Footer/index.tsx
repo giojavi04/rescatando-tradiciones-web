@@ -1,71 +1,48 @@
 import React from "react"
 import { Link } from "gatsby"
 import Image from "../Image"
+import { Footer as FooterRT } from "./styles"
 
 const Footer = () => (
-  <footer className="footerRT border-b py-8">
-    <div>
+  <FooterRT>
+    <section>
       <div className="max-w-6xl m-auto flex flex-wrap justify-center">
-        <div className="p-5 w-48">
-          <Link className="lg:mr-6" to="/">
-            <Image
-              nameImage="logo-rescatando-tradiciones.png"
-              alt="Rescatando tradiciones"
-            />
-          </Link>
+        <div className="p-5 w-full md:w-1/2 lg:w-1/4">
+          <div className="w-32 text-center">
+            <Link className="lg:mr-6" to="/">
+              <Image
+                nameImage="logo-rescatando-tradiciones.png"
+                alt="Rescatando tradiciones"
+              />
+            </Link>
+          </div>
         </div>
-        <div className="p-5 w-48 text-rt-grey">
+        <div className="p-5 w-full md:w-1/2 lg:w-1/4 text-rt-grey">
           <div className="text-xs uppercase text-rt-primary font-medium">
             Home
           </div>
           <a className="my-3 block" href="/#">
-            Services
+            Nosotros
           </a>
           <a className="my-3 block" href="/#">
-            Products
+            Grupos
           </a>
           <a className="my-3 block" href="/#">
-            About Us
-          </a>
-          <a className="my-3 block" href="/#">
-            Pricing
-          </a>
-          <a className="my-3 block" href="/#">
-            Partners
+            Eventos
           </a>
         </div>
-        <div className="p-5 w-48 text-rt-grey">
-          <div className="text-xs uppercase text-rt-primary font-medium">
-            Product
-          </div>
-          <a className="my-3 block" href="/#">
-            Our Products
-          </a>
-          <a className="my-3 block" href="/#">
-            Great Deals
-          </a>
-          <a className="my-3 block" href="/#">
-            Analytics
-          </a>
-          <a className="my-3 block" href="/#">
-            Mobile
-          </a>
-        </div>
-        <div className="p-5 w-48 text-rt-grey">
+        <div className="p-5 w-full md:w-1/2 lg:w-1/4 text-rt-grey">
           <div className="text-xs uppercase text-rt-primary font-medium">
             Support
           </div>
           <a className="my-3 block" href="/#">
-            Help Center
+            Política de privacidad
           </a>
           <a className="my-3 block" href="/#">
-            Privacy Policy
-          </a>
-          <a className="my-3 block" href="/#">
-            Conditions
+            Terminos y condiciones
           </a>
         </div>
-        <div className="p-5 w-48 text-rt-grey">
+        <div className="p-5 w-full md:w-1/2 lg:w-1/4 text-rt-grey">
           <div className="text-xs uppercase text-rt-primary font-medium">
             Contáctanos
           </div>
@@ -77,7 +54,7 @@ const Footer = () => (
           </a>
         </div>
       </div>
-    </div>
+    </section>
 
     <div className="pt-2">
       <div
@@ -105,7 +82,7 @@ const Footer = () => (
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
               xmlSpace="preserve"
-              xmlnsSerif="http://www.serif.com/"
+              xmlnsserif="http://www.serif.com/"
               style={{
                 fillRule: "evenodd",
                 clipRule: "evenodd",
@@ -142,7 +119,7 @@ const Footer = () => (
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
               xmlSpace="preserve"
-              xmlnsSerif="http://www.serif.com/"
+              xmlnsserif="http://www.serif.com/"
               style={{
                 fillRule: "evenodd",
                 clipRule: "evenodd",
@@ -170,7 +147,7 @@ const Footer = () => (
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
               xmlSpace="preserve"
-              xmlnsSerif="http://www.serif.com/"
+              xmlnsserif="http://www.serif.com/"
               style={{
                 fillRule: "evenodd",
                 clipRule: "evenodd",
@@ -204,7 +181,7 @@ const Footer = () => (
         </div>
       </div>
     </div>
-  </footer>
+  </FooterRT>
 )
 
 export default Footer
