@@ -3,13 +3,12 @@ import { Link } from "gatsby"
 
 import Image from "../components/Image"
 import SEO from "../components/Seo"
+import HomeHero from "../components/HomeHero"
 
 const IndexPage = () => (
   <>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <HomeHero />
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image nameImage="gatsby-astronaut.png" alt="Gatsby" />
     </div>
