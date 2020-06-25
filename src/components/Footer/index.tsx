@@ -6,9 +6,9 @@ import { Footer as FooterRT } from "./styles"
 const Footer = () => (
   <FooterRT>
     <section>
-      <div className="max-w-6xl m-auto flex flex-wrap justify-center">
-        <div className="p-5 w-full md:w-1/2 lg:w-1/4">
-          <div className="w-32 text-center">
+      <div className="max-w-6xl m-auto flex flex-wrap">
+        <div className="p-5 w-full md:w-1/2 lg:w-1/4 flex justify-center">
+          <div className="w-32">
             <Link className="lg:mr-6" to="/">
               <Image
                 nameImage="logo-rescatando-tradiciones.png"
@@ -18,8 +18,8 @@ const Footer = () => (
           </div>
         </div>
         <div className="p-5 w-full md:w-1/2 lg:w-1/4 text-rt-grey">
-          <div className="text-xs uppercase text-rt-primary font-medium">
-            Home
+          <div className="text-xs uppercase text-rt-secondary font-medium">
+            MENÚ
           </div>
           <a className="my-3 block" href="/#">
             Nosotros
@@ -32,8 +32,8 @@ const Footer = () => (
           </a>
         </div>
         <div className="p-5 w-full md:w-1/2 lg:w-1/4 text-rt-grey">
-          <div className="text-xs uppercase text-rt-primary font-medium">
-            Support
+          <div className="text-xs uppercase text-rt-secondary font-medium">
+            AYUDA SOPORTE
           </div>
           <a className="my-3 block" href="/#">
             Política de privacidad
@@ -43,14 +43,14 @@ const Footer = () => (
           </a>
         </div>
         <div className="p-5 w-full md:w-1/2 lg:w-1/4 text-rt-grey">
-          <div className="text-xs uppercase text-rt-primary font-medium">
-            Contáctanos
+          <div className="text-xs uppercase text-rt-secondary font-medium">
+            CONTÁCTANOS
           </div>
           <a className="my-3 block" href="/#">
-            rescatandotradiciones@hotmail.com
+            Quito Ecuador.
           </a>
           <a className="my-3 block" href="/#">
-            Quito Ecuador.
+            rescatandotradiciones@hotmail.com
           </a>
         </div>
       </div>
@@ -61,7 +61,7 @@ const Footer = () => (
         className="flex pb-5 px-3 m-auto pt-5 border-t border-rt-grey text-rt-grey text-sm flex-col
       md:flex-row max-w-6xl"
       >
-        <div className="mt-2">
+        <div className="mt-2 text-center sm:text-left">
           © Copyright 2020. All Rights Reserved. By:{" "}
           <a
             href="https://twitter.com/giojavi04"

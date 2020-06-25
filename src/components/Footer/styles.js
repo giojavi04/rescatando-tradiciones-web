@@ -6,5 +6,5 @@ export const Footer = styled.footer`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center left;
-  ${tw`border-b pb-48 pt-64`};
+  ${tw`border-b pb-32 pt-64 px-2 justify-center`};
 `
