@@ -23,6 +23,8 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-layout",
+    "gatsby-plugin-postcss",
     {
       resolve: "gatsby-source-filesystem",
       options: {
