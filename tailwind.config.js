@@ -1,8 +1,25 @@
+const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        transparent: 'transparent',
+        black: colors.black,
+        white: colors.white,
+        rtPrimary: '#53575a',
+        rtTertiary: '#949698',
+        rtSecondary: '#be1622',
+      },
+      fontFamily: {
+        heading: ['"DM Serif Text"', ...defaultTheme.fontFamily.sans],
+        sans: ['Merriweather', ...defaultTheme.fontFamily.sans],
+      }
+    },
+    theme: {},
   },
   variants: {
     extend: {},

@@ -4,7 +4,7 @@ import NavBar from '../components/global/NavBar'
 import Footer from '../components/global/Footer'
 
 // markup
-export default ({ children }) => (
+const Layout = ({ children }) => (
   <div className="bg-white" >
     <div className="relative overflow-hidden">
       <NavBar />
@@ -15,3 +15,5 @@ export default ({ children }) => (
     </div>
   </div>
 )
+
+export default Layout
