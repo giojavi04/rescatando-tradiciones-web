@@ -14,6 +14,7 @@ module.exports = {
         rtPrimary: '#53575a',
         rtTertiary: '#949698',
         rtSecondary: '#be1622',
+        'warm-gray': colors.warmGray,
       },
       fontFamily: {
         heading: ['"DM Serif Text"', ...defaultTheme.fontFamily.sans],
