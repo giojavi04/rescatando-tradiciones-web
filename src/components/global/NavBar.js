@@ -35,7 +35,7 @@ const NavBar = () => {
                     <img
                       className="h-10 w-auto sm:h-12"
                       src={logoWhite}
-                      alt="Rescatanto Tradiciones"
+                      alt="Rescatando Tradiciones"
                     />
                   </a>
                   <div className="-mr-2 flex items-center md:hidden">
