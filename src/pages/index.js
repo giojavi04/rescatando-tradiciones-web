@@ -2,6 +2,7 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 
 import Hero from '../components/home/Hero';
+import Cta from '../components/home/CTA';
 
 // markup
 const IndexPage = () => {
@@ -13,6 +14,7 @@ const IndexPage = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <Hero />
+      <Cta />
     </>
   )
 }

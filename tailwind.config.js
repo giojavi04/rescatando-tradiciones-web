@@ -10,6 +10,7 @@ module.exports = {
         transparent: 'transparent',
         black: colors.black,
         white: colors.white,
+        rose: colors.rose,
         rtPrimary: '#53575a',
         rtTertiary: '#949698',
         rtSecondary: '#be1622',
