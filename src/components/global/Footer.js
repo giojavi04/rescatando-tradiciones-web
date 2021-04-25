@@ -49,12 +49,12 @@ const footerNavigation = {
 // markup
 const Footer = () => {
   return (
-    <footer className="mt-24 bg-gray-900 sm:mt-12">
+    <footer className="mt-24 bg-rtPrimary sm:mt-12">
       <div className="mx-auto max-w-md py-12 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
           {footerNavigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <a href={item.href} className="text-base text-gray-400 hover:text-gray-300">
+              <a href={item.href} className="text-base text-white hover:text-gray-300">
                 {item.name}
               </a>
             </div>
@@ -62,13 +62,13 @@ const Footer = () => {
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
           {footerNavigation.social.map((item) => (
-            <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
+            <a key={item.name} href={item.href} className="text-white hover:text-gray-300">
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-8 text-center text-base text-gray-400">&copy; 2021 Rescatando Tradiciones, Todos los derechos reservados. Desarrollado por: <a href="https://twitter.com/giojavi04" className="text-base text-gray-400 hover:text-gray-300">Javier Montalvo.</a></p>
+        <p className="mt-8 text-center text-base text-white">&copy; 2021 Rescatando Tradiciones, Todos los derechos reservados. Desarrollado por: <a href="https://twitter.com/giojavi04" className="text-base text-white hover:text-gray-300">Javier Montalvo.</a></p>
       </div>
     </footer>
   )

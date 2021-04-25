@@ -6,6 +6,9 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 
+import logo from '../../images/logo-rescatando.png';
+import logoWhite from '../../images/logo-rescatando-blanco.png';
+
 const navigation = [
   { name: 'Nosotros', href: '#' },
   { name: 'Grupos', href: '#' },
@@ -20,7 +23,7 @@ const NavBar = () => {
     <Popover as="header" className="relative">
       {({ open }) => (
         <>
-          <div className="bg-gray-900 pt-6">
+          <div className="bg-rtPrimary pt-6 pb-4">
             <nav
               className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
               aria-label="Global"
@@ -30,9 +33,9 @@ const NavBar = () => {
                   <a href="#">
                     <span className="sr-only">Workflow</span>
                     <img
-                      className="h-8 w-auto sm:h-10"
-                      src="https://tailwindui.com/img/logos/workflow-mark-teal-200-cyan-400.svg"
-                      alt=""
+                      className="h-10 w-auto sm:h-12"
+                      src={logoWhite}
+                      alt="Rescatanto Tradiciones"
                     />
                   </a>
                   <div className="-mr-2 flex items-center md:hidden">
@@ -43,24 +46,18 @@ const NavBar = () => {
                   </div>
                 </div>
                 <div className="hidden space-x-8 md:flex md:ml-10">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-base font-medium text-white hover:text-gray-300"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
                 </div>
               </div>
               <div className="hidden md:flex md:items-center md:space-x-6">
-                <a
-                  href="#"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700"
-                >
-                  Información
-                    </a>
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-base font-medium text-white hover:text-gray-300"
+                  >
+                    {item.name}
+                  </a>
+                ))}
               </div>
             </nav>
           </div>
@@ -85,8 +82,8 @@ const NavBar = () => {
                   <div>
                     <img
                       className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-teal-500-cyan-600.svg"
-                      alt=""
+                      src={logo}
+                      alt="Rescatando Tradiciones"
                     />
                   </div>
                   <div className="-mr-2">
@@ -107,14 +104,6 @@ const NavBar = () => {
                         {item.name}
                       </a>
                     ))}
-                  </div>
-                  <div className="mt-6 px-5">
-                    <a
-                      href="#"
-                      className="block text-center w-full py-3 px-4 rounded-md shadow bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-medium hover:from-teal-600 hover:to-cyan-700"
-                    >
-                      Información
-                        </a>
                   </div>
                 </div>
               </div>

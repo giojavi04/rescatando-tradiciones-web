@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "rescatando-tradiciones-web",
+    title: "Rescatando Tradiciones",
   },
   plugins: [
     "gatsby-plugin-postcss",
