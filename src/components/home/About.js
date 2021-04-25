@@ -118,7 +118,7 @@ const About = () => {
               ))}
             </dl>
             <div className="mt-10">
-              <a href="#" className="text-base font-medium text-rose-500">
+              <a href="#" className="text-base font-medium text-rtSecondary">
                 Conoce todas las agrupaciones aquí &rarr;
                   </a>
             </div>

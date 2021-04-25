@@ -23,7 +23,10 @@ module.exports = {
     theme: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['responsive', 'motion-safe', 'motion-reduce'],
+      translate: ['motion-safe'],
+    },
   },
   plugins: [],
 }
