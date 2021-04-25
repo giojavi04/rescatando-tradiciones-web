@@ -1,4 +1,5 @@
 import * as React from 'react'
+import pabloVillamarinImg from '../../images/home-pablo-villamarin.png';
 
 //markup
 const Testimonial = () => {
@@ -11,7 +12,7 @@ const Testimonial = () => {
             <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
               <img
                 className="object-cover lg:h-full lg:w-full"
-                src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
+                src={pabloVillamarinImg}
                 alt=""
               />
             </div>
