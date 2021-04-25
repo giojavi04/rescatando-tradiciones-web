@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Rescatando Tradiciones",
+    title: `Rescatando Tradiciones`,
+    siteUrl: `https://rescatandotradiciones.org`,
+    description: `Somos una agrupación creada para el rescate de nuestras raíces, de nuestra cultura, vela por mantener la tradición de las Bandas de Guerra y grupos de Bastones quienes se desarrollaron con disciplina, respeto y amor a la patria.`,
   },
   plugins: [
     "gatsby-plugin-postcss",
