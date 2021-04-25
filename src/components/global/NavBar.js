@@ -56,6 +56,7 @@ const NavBar = () => {
                     key={item.name}
                     to={item.to}
                     className="text-base font-medium text-white hover:text-gray-300"
+                    activeClassName="text-gray-300"
                   >
                     {item.name}
                   </Link>
