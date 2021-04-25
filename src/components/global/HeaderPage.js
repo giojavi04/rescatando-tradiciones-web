@@ -3,12 +3,12 @@ import * as React from "react"
 // markup
 const HeaderPage = ({ imgSrc, title, description }) => {
   return (
-    <div className="relative bg-rtSecondary">
+    <div className="relative bg-rtSecondary lg:overflow-hidden">
       <div className="absolute inset-0">
         <img
           className="w-full h-full object-cover"
           src={imgSrc}
-          alt=""
+          alt={title}
         />
         <div className="absolute inset-0 bg-gray-500" style={{ mixBlendMode: 'multiply' }} aria-hidden="true" />
       </div>
