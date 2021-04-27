@@ -1,21 +1,30 @@
-import React from "react"
-import { Link } from "gatsby"
+import * as React from "react"
+import { Helmet } from "react-helmet"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Hero from '../components/home/Hero';
+import About from '../components/home/About';
+import Events from '../components/home/Events';
+import Testimonial from '../components/home/Testimonial';
+import Blog from '../components/home/Blog';
+import Cta from '../components/home/CTA';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+// markup
+const IndexPage = () => {
+  return (
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Rescatando Tradiciones | Home</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+      <Hero />
+      <About />
+      <Events />
+      <Testimonial />
+      <Blog />
+      <Cta />
+    </>
+  )
+}
 
 export default IndexPage
