@@ -28,6 +28,12 @@ module.exports = {
     "gatsby-plugin-layout",
     "gatsby-plugin-postcss",
     {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
