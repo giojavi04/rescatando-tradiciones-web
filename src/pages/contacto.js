@@ -12,7 +12,6 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
         <title>Rescatando Tradiciones | Contacto</title>
       </Helmet>
       <HeaderPage imgSrc={contactImg} title="Contacto" description="Si deseas conocer más sobre nosotros, llena el formulario." />

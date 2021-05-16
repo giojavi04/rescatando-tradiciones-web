@@ -12,7 +12,6 @@ const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" />
         <title>Rescatando Tradiciones | Nosotros</title>
       </Helmet>
       <HeaderPage imgSrc={headerImg} title="Nosotros" description="Somos la escencia de la tradición" />
