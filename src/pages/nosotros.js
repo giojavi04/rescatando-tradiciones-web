@@ -12,7 +12,7 @@ const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>Rescatando Tradiciones | Nosotros</title>
+        <title>Nosotros</title>
       </Helmet>
       <HeaderPage imgSrc={headerImg} title="Nosotros" description="Somos la escencia de la tradición" />
       <Content />

@@ -13,7 +13,7 @@ const IndexPage = () => {
   return (
     <>
       <Helmet>
-        <title>Rescatando Tradiciones | Home</title>
+        <title>Home</title>
       </Helmet>
       <Hero />
       <About />

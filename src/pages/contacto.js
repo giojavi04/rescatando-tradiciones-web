@@ -12,7 +12,7 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Rescatando Tradiciones | Contacto</title>
+        <title>Contacto</title>
       </Helmet>
       <HeaderPage imgSrc={contactImg} title="Contacto" description="Si deseas conocer más sobre nosotros, llena el formulario." />
       <Content />
