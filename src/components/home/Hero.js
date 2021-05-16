@@ -54,11 +54,7 @@ const Hero = () => {
                     </div>
                   </div>
                   <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                    ¿Deseas conocer más acerca de nuestro colectivo?. Ingresa tu email, y nos comunicaremos contigo{' '}
-                    <a href="#" className="font-medium text-white">
-                      terminos de privacidad
-                          </a>
-                          .
+                    ¿Deseas conocer más acerca de nuestro colectivo?. Ingresa tu email, y nos comunicaremos contigo.
                         </p>
                 </form>
               </div>
