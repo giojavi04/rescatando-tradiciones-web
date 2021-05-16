@@ -113,7 +113,7 @@ collections:
                 ],
             }
       - file: "src/pages/about/index.md"
-        label: "About"
+        label: "Nosotros"
         name: "about"
         fields:
           - {
@@ -122,8 +122,47 @@ collections:
               widget: "hidden",
               default: "about-page",
             }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Image Header", name: imageHeader, widget: image }
+          - { label: Título, name: title, widget: string }
+          - { label: "Sub Header", name: subHeader, widget: string }
+          - { label: Description, name: description, widget: markdown }
+          - { label: "Imagen de Contenido", name: imageContent, widget: image }
+          - {
+              label: "Image Descripción",
+              name: imageDescription,
+              widget: string,
+            }
+          - {
+              label: Nuestro Equipo,
+              name: our-team,
+              widget: object,
+              fields:
+                [
+                  { label: Título, name: title, widget: string },
+                  { label: Description, name: description, widget: markdown },
+                  {
+                    label: Equipo,
+                    name: team,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Imagen, name: image, widget: image },
+                        { label: Nombre, name: name, widget: string },
+                        { label: Cargo, name: role, widget: string },
+                        {
+                          label: "Twitter Url",
+                          name: twitterUrl,
+                          widget: string,
+                        },
+                        {
+                          label: "Linkedin Url",
+                          name: linkedinUrl,
+                          widget: string,
+                        },
+                      ],
+                  },
+                ],
+            }
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
