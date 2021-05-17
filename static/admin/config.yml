@@ -36,7 +36,7 @@ collections:
 
   - name: "groups"
     label: "Grupos"
-    folder: "src/pages/groups"
+    folder: "src/pages/grupos"
     create: true
     slug: "{{slug}}"
     fields:
@@ -56,8 +56,28 @@ collections:
           - { label: "Varios", value: "VARIOS" }
       - { label: "Image Header", name: imageHeader, widget: image }
       - { label: Título, name: title, widget: string }
-      - { label: "Sub Header", name: subHeader, widget: string }
+      - { label: "Lema", name: motto, widget: string }
       - { label: Descripción, name: description, widget: markdown }
+
+  - name: "events"
+    label: "Eventos"
+    folder: "src/pages/eventos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "events-page",
+        }
+      - { label: "Image Header", name: imageHeader, widget: image }
+      - { label: Título, name: title, widget: string }
+      - { label: "Sub Header", name: subHeader, widget: string }
+      - { label: "Logo del Evento", name: logoEvent, widget: image }
+      - { label: "Descripción corta", name: resume, widget: string }
+      - { label: Descripción, name: description, widget: markdown }
+
   - name: "pages"
     label: "Pages"
     files:
