@@ -1,6 +1,8 @@
 import * as React from 'react'
 import ContentHTML from '../global/ContentHTML'
 
+import parser from '../../utils/renderMakdown'
+
 const stats = [
   { label: 'Bandas', value: '20' },
   { label: 'Bastoneras', value: '10' },
@@ -83,7 +85,7 @@ const About = ({ data }) => {
         <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
           {/* Content area */}
           <div className="pt-12 sm:pt-16 lg:pt-20">
-            <ContentHTML className="content" content={data.description} />
+            <ContentHTML className="content" content={parser.render(data.description)} />
             <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl">
               Recuperemos la cultura
                 </h2>

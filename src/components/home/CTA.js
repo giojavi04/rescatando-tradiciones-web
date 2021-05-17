@@ -1,7 +1,7 @@
 import * as React from "react"
 
 // markup
-const Cta = () => {
+const Cta = ({ data }) => {
   return (
     <div className="relative sm:mt-10 sm:py-16">
       <div aria-hidden="true" className="hidden sm:block">
@@ -47,12 +47,11 @@ const Cta = () => {
           <div className="relative">
             <div className="sm:text-center">
               <h2 className="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
-                Recibe notificaciones cuando hagamos eventos.
-                  </h2>
+                {data.title}
+              </h2>
               <p className="mt-6 mx-auto max-w-2xl text-lg text-rose-100">
-                Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque
-                tristique pellentesque.
-                  </p>
+                {data.description}
+              </p>
             </div>
             <form action="#" className="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
               <div className="min-w-0 flex-1">

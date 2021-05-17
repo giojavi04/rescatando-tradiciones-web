@@ -26,7 +26,8 @@ homIntro:
 homeIntro:
   image: /img/home-about-javier.jpeg
   description: >-
-    ## Recuperemos la cultura
+    ## <h2 className="text-3xl text-gray-900 font-extrabold tracking-tight
+    sm:text-4xl">Recuperemos la cultura</h2>
 
 
     Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.
