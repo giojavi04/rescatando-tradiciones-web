@@ -48,17 +48,17 @@ collections:
           default: "group-page",
         }
       - label: "Tipo"
-        name: "type-code"
+        name: "groupType"
         widget: "select"
         options:
           - { label: "Banda", value: "BANDA" }
           - { label: "Bastoneras", value: "BASTO" }
           - { label: "Danza", value: "DANZA" }
           - { label: "Varios", value: "VARIOS" }
-      - { label: "Image Header", name: imageHeader, widget: image }
-      - { label: Título, name: title, widget: string }
-      - { label: "Lema", name: motto, widget: string }
-      - { label: Descripción, name: description, widget: markdown }
+      - { label: "Image Header", name: groupimageHeader, widget: image }
+      - { label: Título, name: groupTitle, widget: string }
+      - { label: "Lema", name: groupMotto, widget: string }
+      - { label: Descripción, name: groupDescription, widget: markdown }
 
   - name: "events"
     label: "Eventos"
@@ -72,12 +72,12 @@ collections:
           widget: "hidden",
           default: "events-page",
         }
-      - { label: "Image Header", name: imageHeader, widget: image }
-      - { label: Título, name: title, widget: string }
-      - { label: "Sub Header", name: subHeader, widget: string }
-      - { label: "Logo del Evento", name: logoEvent, widget: image }
-      - { label: "Descripción corta", name: resume, widget: string }
-      - { label: Descripción, name: description, widget: markdown }
+      - { label: "Image Header", name: eventImageHeader, widget: image }
+      - { label: Título, name: eventTitle, widget: string }
+      - { label: "Sub Header", name: eventSubHeader, widget: string }
+      - { label: "Logo del Evento", name: eventLogoEvent, widget: image }
+      - { label: "Descripción corta", name: eventResume, widget: string }
+      - { label: Descripción, name: eventDescription, widget: markdown }
 
   - name: "pages"
     label: "Pages"
@@ -92,10 +92,10 @@ collections:
               default: "index-page",
               widget: "hidden",
             }
-          - { label: Title, name: title, widget: string }
+          - { label: Title, name: homeTitle, widget: string }
           - {
               label: Hero,
-              name: hero,
+              name: homeHero,
               widget: object,
               fields:
                 [
@@ -105,7 +105,7 @@ collections:
             }
           - {
               label: Intro,
-              name: intro,
+              name: homeIntro,
               widget: object,
               fields:
                 [
@@ -117,7 +117,7 @@ collections:
             }
           - {
               label: Eventos,
-              name: events,
+              name: homeEvents,
               widget: object,
               fields:
                 [
@@ -127,7 +127,7 @@ collections:
             }
           - {
               label: Testimonio,
-              name: testimonial,
+              name: homeTestimonial,
               widget: object,
               fields:
                 [
@@ -139,7 +139,7 @@ collections:
             }
           - {
               label: Posts,
-              name: posts,
+              name: homePosts,
               widget: object,
               fields:
                 [
@@ -149,7 +149,7 @@ collections:
             }
           - {
               label: CTA,
-              name: cta,
+              name: homeCta,
               widget: object,
               fields:
                 [
@@ -167,19 +167,23 @@ collections:
               widget: "hidden",
               default: "about-page",
             }
-          - { label: "Image Header", name: imageHeader, widget: image }
-          - { label: Título, name: title, widget: string }
-          - { label: "Sub Header", name: subHeader, widget: string }
-          - { label: Descripción, name: description, widget: markdown }
-          - { label: "Imagen de Contenido", name: imageContent, widget: image }
+          - { label: "Image Header", name: aboutImageHeader, widget: image }
+          - { label: Título, name: aboutTitle, widget: string }
+          - { label: "Sub Header", name: aboutSubHeader, widget: string }
+          - { label: Descripción, name: aboutDescription, widget: markdown }
+          - {
+              label: "Imagen de Contenido",
+              name: aboutImageContent,
+              widget: image,
+            }
           - {
               label: "Image Descripción",
-              name: imageDescription,
+              name: aboutImageDescription,
               widget: string,
             }
           - {
               label: Nuestro Equipo,
-              name: our-team,
+              name: aboutTeam,
               widget: object,
               fields:
                 [
@@ -218,16 +222,20 @@ collections:
               widget: "hidden",
               default: "contact-page",
             }
-          - { label: "Image Header", name: imageHeader, widget: image }
-          - { label: Título, name: title, widget: string }
-          - { label: "Sub Header", name: subHeader, widget: string }
-          - { label: Descripción, name: description, widget: markdown }
-          - { label: Contenido Formulario, name: contentForm, widget: markdown }
-          - { label: Teléfono, name: phone, widget: string }
-          - { label: Email, name: mail, widget: string }
+          - { label: "Image Header", name: contactImageHeader, widget: image }
+          - { label: Título, name: contactTitle, widget: string }
+          - { label: "Sub Header", name: contactSubHeader, widget: string }
+          - { label: Descripción, name: contactDescription, widget: markdown }
+          - {
+              label: Contenido Formulario,
+              name: contactContentForm,
+              widget: markdown,
+            }
+          - { label: Teléfono, name: contactPhone, widget: string }
+          - { label: Email, name: contactMail, widget: string }
           - {
               label: Información Adicional,
-              name: adicional-info,
+              name: contactAdditionalInfo,
               widget: object,
               fields:
                 [
