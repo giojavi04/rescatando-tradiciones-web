@@ -24,38 +24,39 @@ const AboutPage = ({ data }) => {
 
 export const pageQuery = graphql`
   query NosotrosPageTemplate {
-  markdownRemark(frontmatter: { aboutTitle: { eq: "Nosotros" }}) {
-    frontmatter {
-      aboutTitle
-      aboutImageHeader {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid
+    markdownRemark(frontmatter: { aboutTitle: { eq: "Nosotros" }}) {
+      frontmatter {
+        aboutTitle
+        aboutImageHeader {
+          childImageSharp {
+            fluid(maxWidth: 1920, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
-      }
-      aboutSubHeader
-      aboutDescription
-      aboutImageContent {
-        childImageSharp {
-          fluid(maxWidth: 1285, quality: 100) {
-            ...GatsbyImageSharpFluid
+        aboutSubHeader
+        aboutDescription
+        aboutImageContent {
+          childImageSharp {
+            fluid(maxWidth: 1285, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
-      }
-      aboutImageDescription
-      aboutTeam {
-        title
-        description
-        team {
-          name
-          role
-          twitterUrl
-          linkedinUrl
-          image {
-            childImageSharp {
-              fluid(maxWidth: 1024, quality: 100) {
-                ...GatsbyImageSharpFluid
+        aboutImageDescription
+        aboutTeam {
+          title
+          description
+          team {
+            name
+            role
+            twitterUrl
+            linkedinUrl
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1024, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
@@ -63,7 +64,6 @@ export const pageQuery = graphql`
       }
     }
   }
-}
 `
 
 export default AboutPage

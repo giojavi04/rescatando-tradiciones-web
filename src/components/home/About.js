@@ -1,12 +1,12 @@
 import * as React from 'react'
 import ContentHTML from '../global/ContentHTML'
 
-const stats = [
-  { label: 'Bandas', value: '20' },
-  { label: 'Bastoneras', value: '10' },
-  { label: 'Danzas', value: '5' },
-  { label: 'Otros', value: '10' },
-]
+// const stats = [
+//   { label: 'Bandas', value: '20' },
+//   { label: 'Bastoneras', value: '10' },
+//   { label: 'Danzas', value: '5' },
+//   { label: 'Otros', value: '10' },
+// ]
 
 //markup
 const About = ({ data }) => {
@@ -87,7 +87,7 @@ const About = ({ data }) => {
           </div>
 
           {/* Stats section */}
-          <div className="mt-10">
+          {/* <div className="mt-10">
             <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
               {stats.map((stat) => (
                 <div key={stat.label} className="border-t-2 border-gray-100 pt-6">
@@ -101,7 +101,7 @@ const About = ({ data }) => {
                 Conoce todas las agrupaciones aquí &rarr;
                   </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
