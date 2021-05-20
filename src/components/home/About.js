@@ -1,5 +1,4 @@
 import * as React from 'react'
-import ReactMarkdown from 'react-markdown'
 import ContentHTML from '../global/ContentHTML'
 
 const stats = [
