@@ -1,8 +1,7 @@
 import * as React from 'react'
-import pabloVillamarinImg from '../../images/home-pablo-villamarin.png';
 
 //markup
-const Testimonial = () => {
+const Testimonial = ({ data }) => {
   return (
     <div className="pb-16 bg-gradient-to-r from-rose-400 to-rtSecondary lg:pb-0 lg:z-10 lg:relative">
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-8">
@@ -12,8 +11,8 @@ const Testimonial = () => {
             <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
               <img
                 className="object-cover lg:h-full lg:w-full"
-                src={pabloVillamarinImg}
-                alt=""
+                src={data.image.childImageSharp.fluid.src}
+                alt={data.author}
               />
             </div>
           </div>
@@ -31,13 +30,12 @@ const Testimonial = () => {
                   <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                 </svg>
                 <p className="mt-6 text-2xl font-medium text-white">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue.
-                  Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
-                      </p>
+                  {data.phrase}
+                </p>
               </div>
               <footer className="mt-6">
-                <p className="text-base font-medium text-white">Pablo Villamarín</p>
-                <p className="text-base font-medium text-cyan-100">Sub Coordinador RT.</p>
+                <p className="text-base font-medium text-white">{data.author}</p>
+                <p className="text-base font-medium text-cyan-100">{data.charge}</p>
               </footer>
             </blockquote>
           </div>
