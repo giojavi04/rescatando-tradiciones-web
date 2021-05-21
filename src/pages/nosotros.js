@@ -1,7 +1,7 @@
 import * as React from "react"
-import { Helmet } from "react-helmet"
 import { graphql } from 'gatsby'
 
+import Seo from '../components/global/Seo'
 import HeaderPage from '../components/global/HeaderPage'
 import Content from '../components/about/content'
 import Team from '../components/about/team'
@@ -12,9 +12,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <>
-      <Helmet>
-        <title>{frontmatter.aboutTitle}</title>
-      </Helmet>
+      <Seo title={frontmatter.aboutTitle} />
       <HeaderPage imgSrc={frontmatter.aboutImageHeader.childImageSharp.fluid.src} title={frontmatter.aboutTitle} description={frontmatter.aboutSubHeader} />
       <Content data={frontmatter} />
       <Team data={frontmatter.aboutTeam} />

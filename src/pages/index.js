@@ -1,7 +1,7 @@
 import * as React from "react"
 import { graphql } from 'gatsby'
-import { Helmet } from "react-helmet"
 
+import Seo from '../components/global/Seo'
 import Hero from '../components/home/Hero';
 import About from '../components/home/About';
 import Events from '../components/home/Events';
@@ -15,9 +15,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <Helmet>
-        <title>Home</title>
-      </Helmet>
+      <Seo title="Home" />
       <Hero data={frontmatter.homeHero} />
       <About data={frontmatter.homeIntro} />
       <Events data={frontmatter.homeEvents} />

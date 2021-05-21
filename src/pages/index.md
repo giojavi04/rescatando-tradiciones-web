@@ -61,7 +61,7 @@ homeTestimonial:
   image: /img/home-pablo-villamarin.png
   phrase: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla
     vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc
-    urna, sit.
+    urna, sits.
   author: Pablo Villamarín
   charge: Sub Coordinador RT.
 homePosts:

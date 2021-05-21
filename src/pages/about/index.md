@@ -1,7 +1,7 @@
 ---
 aboutImageHeader: /img/about-header.png
 aboutTitle: Nosotros
-aboutSubHeader: Somos la escencia de la tradición
+aboutSubHeader: Somos la escencia de la tradición.
 aboutDescription: >-
   <div className="text-base max-w-prose mx-auto lg:max-w-none">
                 <p className="text-lg text-gray-500">

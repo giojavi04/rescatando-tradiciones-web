@@ -1,7 +1,7 @@
 ---
 contactImageHeader: /img/contact-header.png
 contactTitle: Contacto
-contactSubHeader: Si deseas conocer más sobre nosotros, llena el formulario.
+contactSubHeader: Si deseas conocer más sobre nosotros, llena el formulario
 contactDescription: >-
   <h1 className="text-4xl font-extrabold tracking-tight text-3xl font-extrabold
   text-warm-gray-900">
