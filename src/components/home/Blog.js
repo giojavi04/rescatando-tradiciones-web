@@ -92,21 +92,9 @@ const Blog = ({ data }) => {
                   </a>
                 </div>
                 <div className="mt-6 flex items-center">
-                  <div className="flex-shrink-0">
-                    <a href={post.author.href}>
-                      <img className="h-10 w-10 rounded-full" src={post.author.imageUrl} alt={post.author.name} />
-                    </a>
-                  </div>
                   <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-900">
-                      <a href={post.author.href} className="hover:underline">
-                        {post.author.name}
-                      </a>
-                    </p>
                     <div className="flex space-x-1 text-sm text-gray-500">
                       <time dateTime={post.datetime}>{post.date}</time>
-                      <span aria-hidden="true">&middot;</span>
-                      <span>{post.readingLength} leer</span>
                     </div>
                   </div>
                 </div>
