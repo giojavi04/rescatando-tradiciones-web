@@ -4,8 +4,8 @@ import { Link } from 'gatsby'
 const footerNavigation = {
   main: [
     { name: 'Nosotros', to: '/nosotros' },
-    { name: 'Grupos', to: '#' },
-    { name: 'Eventos', to: '#' },
+    { name: 'Grupos', to: '/grupos' },
+    { name: 'Eventos', to: '/eventos' },
     { name: 'Blog', to: '#' },
     { name: 'Contacto', to: '/contacto' },
   ],

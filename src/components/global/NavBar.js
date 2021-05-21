@@ -13,8 +13,8 @@ import logoWhite from '../../images/logo-rescatando-blanco.png';
 
 const navigation = [
   { name: 'Nosotros', to: '/nosotros' },
-  { name: 'Grupos', to: '#' },
-  { name: 'Eventos', to: '#' },
+  { name: 'Grupos', to: '/grupos' },
+  { name: 'Eventos', to: '/eventos' },
   { name: 'Blog', to: '#' },
   { name: 'Contacto', to: '/contacto' },
 ]
