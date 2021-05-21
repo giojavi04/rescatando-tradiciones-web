@@ -54,10 +54,10 @@ const Footer = () => {
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
           {footerNavigation.social.map((item) => (
-            <Link key={item.name} to={item.to} target="__blank" className="text-gray-400 hover:text-gray-300">
+            <a key={item.name} href={item.to} target="__blank" className="text-gray-400 hover:text-gray-300">
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
-            </Link>
+            </a>
           ))}
         </div>
         <p className="mt-8 text-center text-base text-gray-400">&copy; 2021 Rescatando Tradiciones, Todos los derechos reservados. Desarrollado por: <a href="https://twitter.com/giojavi04" className="text-base text-gray-400 hover:text-gray-300">Javier Montalvo.</a></p>
