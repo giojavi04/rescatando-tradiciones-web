@@ -96,12 +96,6 @@ collections:
         label: "Home Page"
         name: "index"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              default: "index-page",
-              widget: "hidden",
-            }
           - { label: Title, name: homeTitle, widget: string }
           - {
               label: Hero,
@@ -167,16 +161,10 @@ collections:
                   { label: Description, name: description, widget: text },
                 ],
             }
-      - file: "src/pages/about/index.md"
+      - file: "src/pages/about.md"
         label: "Nosotros"
         name: "about"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "about-page",
-            }
           - { label: "Image Header", name: aboutImageHeader, widget: image }
           - { label: Título, name: aboutTitle, widget: string }
           - { label: "Sub Header", name: aboutSubHeader, widget: string }
@@ -222,16 +210,26 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/contact/index.md"
+      - file: "src/pages/groups.md"
+        label: "Grupos"
+        name: "groups"
+        fields:
+          - { label: "Image Header", name: groupsImageHeader, widget: image }
+          - { label: Título, name: groupsTitle, widget: string }
+          - { label: "Sub Header", name: groupsSubHeader, widget: string }
+          - { label: Descripción, name: groupsDescription, widget: markdown }
+      - file: "src/pages/events.md"
+        label: "Eventos"
+        name: "events"
+        fields:
+          - { label: "Image Header", name: eventsImageHeader, widget: image }
+          - { label: Título, name: eventsTitle, widget: string }
+          - { label: "Sub Header", name: eventsSubHeader, widget: string }
+          - { label: Descripción, name: eventsDescription, widget: markdown }
+      - file: "src/pages/contact.md"
         label: "Contacto"
         name: "contact"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "contact-page",
-            }
           - { label: "Image Header", name: contactImageHeader, widget: image }
           - { label: Título, name: contactTitle, widget: string }
           - { label: "Sub Header", name: contactSubHeader, widget: string }
