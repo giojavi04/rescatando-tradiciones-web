@@ -54,7 +54,7 @@ const Footer = () => {
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
           {footerNavigation.social.map((item) => (
-            <Link key={item.name} to={item.to} className="text-gray-400 hover:text-gray-300">
+            <Link key={item.name} to={item.to} target="__blank" className="text-gray-400 hover:text-gray-300">
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </Link>
