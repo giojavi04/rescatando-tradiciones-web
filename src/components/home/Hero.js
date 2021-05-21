@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link } from 'gatsby'
+
+import ContentHTML from '../global/ContentHTML'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 
 // markup
@@ -21,15 +23,7 @@ const Hero = ({ data }) => {
                 <span className="ml-4 text-sm">Conócenos.</span>
                 <ChevronRightIcon className="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
               </Link>
-              <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                <span className="block">Somos la escencia</span>
-                <span className="bg-clip-text text-rtSecondary block">
-                  de la tradición.
-                      </span>
-              </h1>
-              <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                {data.description}
-              </p>
+              <ContentHTML content={data.description} />
               <div className="mt-10 sm:mt-12">
                 <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
                   <div className="sm:flex">

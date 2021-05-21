@@ -103,7 +103,7 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: Description, name: description, widget: string },
+                  { label: Description, name: description, widget: markdown },
                   { label: Image, name: image, widget: image },
                 ],
             }
@@ -217,7 +217,12 @@ collections:
           - { label: "Image Header", name: groupsImageHeader, widget: image }
           - { label: Título, name: groupsTitle, widget: string }
           - { label: "Sub Header", name: groupsSubHeader, widget: string }
-          - { label: Descripción, name: groupsDescription, widget: markdown }
+          - {
+              label: Descripción,
+              name: groupsDescription,
+              widget: markdown,
+              required: false,
+            }
       - file: "src/pages/events.md"
         label: "Eventos"
         name: "events"
@@ -225,7 +230,12 @@ collections:
           - { label: "Image Header", name: eventsImageHeader, widget: image }
           - { label: Título, name: eventsTitle, widget: string }
           - { label: "Sub Header", name: eventsSubHeader, widget: string }
-          - { label: Descripción, name: eventsDescription, widget: markdown }
+          - {
+              label: Descripción,
+              name: eventsDescription,
+              widget: markdown,
+              required: false,
+            }
       - file: "src/pages/contact.md"
         label: "Contacto"
         name: "contact"

@@ -1,10 +1,17 @@
 ---
 homeTitle: Home
 homeHero:
-  description: Somos una agrupación creada para el rescate de nuestras raíces, de
-    nuestra cultura, vela por mantener la tradición de las Bandas de Guerra y
-    grupos de Bastones quienes se desarrollaron con disciplina, respeto y amor a
-    la patria.  Email
+  description: >-
+    <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-white
+    sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                    <span className="block">Somos la escencia</span>
+                    <span className="bg-clip-text text-rtSecondary block">
+                      de la tradición.
+                          </span>
+                  </h1>
+                  <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                    Somos una agrupación creada para el rescate de nuestras raíces, de nuestra cultura, vela por mantener la tradición de las Bandas de Guerra y grupos de Bastones quienes se desarrollaron con disciplina, respeto y amor a la patria.
+                  </p>
   image: /img/home-hero.png
 homIntro:
   image: /img/home-about-javier.jpeg
