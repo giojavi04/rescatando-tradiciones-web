@@ -1,9 +1,9 @@
 import * as React from "react"
 import { graphql } from 'gatsby'
 
-import Seo from '../components/global/Seo'
-import HeaderPage from '../components/global/HeaderPage'
-import Content from '../components/groups/content'
+import Seo from '../../components/global/Seo'
+import HeaderPage from '../../components/global/HeaderPage'
+import Content from '../../components/groups/content'
 
 // markup
 const GroupsPage = ({ data }) => {
