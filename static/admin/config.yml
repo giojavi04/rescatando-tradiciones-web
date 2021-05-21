@@ -55,10 +55,15 @@ collections:
           - { label: "Bastoneras", value: "BASTO" }
           - { label: "Danza", value: "DANZA" }
           - { label: "Varios", value: "VARIOS" }
-      - { label: "Image Header", name: groupimageHeader, widget: image }
-      - { label: Título, name: groupTitle, widget: string }
+      - { label: "Imagen Header", name: groupimageHeader, widget: image }
+      - { label: "Nombre de agrupación", name: groupTitle, widget: string }
       - { label: "Lema", name: groupMotto, widget: string }
-      - { label: Descripción, name: groupDescription, widget: markdown }
+      - { label: Descripción, name: groupDescription, widget: text }
+      - { label: Contenido, name: groupContent, widget: markdown }
+      - { label: "Facebook url", name: groupLinkFacebook, widget: string }
+      - { label: "Instagram url", name: groupLinkInstagram, widget: string }
+      - { label: "Email", name: groupEmail, widget: string }
+      - { label: "Teléfono", name: groupPhone, widget: string, required: false }
 
   - name: "events"
     label: "Eventos"
@@ -74,7 +79,12 @@ collections:
         }
       - { label: "Image Header", name: eventImageHeader, widget: image }
       - { label: Título, name: eventTitle, widget: string }
-      - { label: "Sub Header", name: eventSubHeader, widget: string }
+      - {
+          label: "Sub Header",
+          name: eventSubHeader,
+          widget: string,
+          required: false,
+        }
       - { label: "Logo del Evento", name: eventLogoEvent, widget: image }
       - { label: "Descripción corta", name: eventResume, widget: string }
       - { label: Descripción, name: eventDescription, widget: markdown }
