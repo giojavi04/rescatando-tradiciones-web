@@ -236,6 +236,19 @@ collections:
               widget: markdown,
               required: false,
             }
+      - file: "src/pages/blog.md"
+        label: "Blog"
+        name: "blog"
+        fields:
+          - { label: "Image Header", name: blogImageHeader, widget: image }
+          - { label: Título, name: blogTitle, widget: string }
+          - { label: "Sub Header", name: blogSubHeader, widget: string }
+          - {
+              label: Descripción,
+              name: blogDescription,
+              widget: markdown,
+              required: false,
+            }
       - file: "src/pages/contact.md"
         label: "Contacto"
         name: "contact"

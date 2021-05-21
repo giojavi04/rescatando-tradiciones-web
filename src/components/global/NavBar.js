@@ -15,7 +15,7 @@ const navigation = [
   { name: 'Nosotros', to: '/nosotros' },
   { name: 'Grupos', to: '/grupos' },
   { name: 'Eventos', to: '/eventos' },
-  { name: 'Blog', to: '#' },
+  { name: 'Blog', to: '/blog' },
   { name: 'Contacto', to: '/contacto' },
 ]
 
