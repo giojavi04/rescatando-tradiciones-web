@@ -27,6 +27,12 @@ collections:
           widget: "hidden",
           default: "blog-post",
         }
+      - {
+          label: "Template Path",
+          name: "templatePath",
+          widget: "hidden",
+          default: "blog",
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
@@ -46,6 +52,12 @@ collections:
           name: "templateKey",
           widget: "hidden",
           default: "group-page",
+        }
+      - {
+          label: "Template Path",
+          name: "templatePath",
+          widget: "hidden",
+          default: "groups",
         }
       - label: "Tipo"
         name: "groupType"
@@ -76,6 +88,12 @@ collections:
           name: "templateKey",
           widget: "hidden",
           default: "events-page",
+        }
+      - {
+          label: "Template Path",
+          name: "templatePath",
+          widget: "hidden",
+          default: "events",
         }
       - { label: "Image Header", name: eventImageHeader, widget: image }
       - { label: Título, name: eventTitle, widget: string }
