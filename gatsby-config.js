@@ -92,12 +92,13 @@ module.exports = {
       __key: "pages",
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-nprogress`,
       options: {
-        name: "blog",
-        path: `${__dirname}/src/pages/blog`,
+        // Setting a color is optional.
+        color: `#be1622`,
+        // Disable the loading spinner.
+        showSpinner: false,
       },
-      __key: "blog",
     },
   ],
 };
