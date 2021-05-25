@@ -68,7 +68,7 @@ collections:
           - { label: "Danza", value: "DANZA" }
           - { label: "Varios", value: "VARIOS" }
       - { label: "Imagen Header", name: groupimageHeader, widget: image }
-      - { label: "Nombre de agrupación", name: groupTitle, widget: string }
+      - { label: "Nombre de agrupación", name: title, widget: string }
       - { label: "Lema", name: groupMotto, widget: string }
       - { label: Descripción, name: groupDescription, widget: text }
       - { label: Contenido, name: groupContent, widget: markdown }
@@ -87,7 +87,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "events-page",
+          default: "event-page",
         }
       - {
           label: "Template Path",
@@ -96,7 +96,7 @@ collections:
           default: "events",
         }
       - { label: "Image Header", name: eventImageHeader, widget: image }
-      - { label: Título, name: eventTitle, widget: string }
+      - { label: Título, name: title, widget: string }
       - {
           label: "Sub Header",
           name: eventSubHeader,
