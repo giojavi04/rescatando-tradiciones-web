@@ -228,7 +228,7 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/grupos/index.md"
+      - file: "src/pages/pagesGlobal/grupos.md"
         label: "Grupos"
         name: "groups"
         fields:
@@ -241,7 +241,7 @@ collections:
               widget: markdown,
               required: false,
             }
-      - file: "src/pages/eventos/index.md"
+      - file: "src/pages/pagesGlobal/eventos.md"
         label: "Eventos"
         name: "events"
         fields:
@@ -254,7 +254,7 @@ collections:
               widget: markdown,
               required: false,
             }
-      - file: "src/pages/blog/index.md"
+      - file: "src/pages/pagesGlobal/blog.md"
         label: "Blog"
         name: "blog"
         fields:
