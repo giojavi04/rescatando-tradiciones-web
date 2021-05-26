@@ -1,10 +1,41 @@
 import * as React from "react"
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-const BlogPostTemplate = () => {
+import Seo from '../components/global/Seo'
+import BlogPost from '../components/global/BlogPost'
+
+const BlogPostTemplate = ({ data }) => {
+  const { markdownRemark: post } = data
+  console.log(post)
+
   return (
-    <h1>Blog</h1>
+    <>
+      <Seo title={post.frontmatter.title} description={post.frontmatter.description} />
+      <BlogPost title={post.frontmatter.title} content={post.html} tags={post.frontmatter.tags} />
+    </>
   )
 }
+
+BlogPostTemplate.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.object,
+  }),
+}
+
+export const pageQuery = graphql`
+  query BlogPostByID($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
+      html
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+        description
+        tags
+      }
+    }
+  }
+`
 
 export default BlogPostTemplate
