@@ -7,7 +7,6 @@ import BlogPost from '../components/global/BlogPost'
 
 const BlogPostTemplate = ({ data }) => {
   const { markdownRemark: post } = data
-  console.log(post)
 
   return (
     <>
