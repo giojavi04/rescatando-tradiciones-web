@@ -1,6 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import { GatsbyImage } from 'gatsby-plugin-image'
+import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 
 import ContentHTML from './ContentHTML'
 
@@ -34,25 +35,23 @@ const GroupPost = ({
             <div className="prose prose-indigo text-gray-500 mx-auto lg:max-w-none">
               <ContentHTML content={content} />
             </div>
-            <div className="mt-10 flex text-base max-w-prose mx-auto lg:max-w-none">
-              <div className="rounded-md shadow">
-                <a
-                  href={`mailto:${email}`}
-                  target="__blank"
-                  className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rtSecondary hover:bg-rose-900"
-                >
-                  {email}
-                </a>
-              </div>
-              <div className="rounded-md shadow ml-4">
-                <a
-                  href={`tel:${phone}`}
-                  target="__blank"
-                  className="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-rtSecondary bg-white hover:bg-gray-50"
-                >
-                  {phone}
-                </a>
-              </div>
+            <div className="mt-4 flex text-base max-w-prose mx-auto lg:max-w-none">
+              <dl className="space-y-6 lg:gap-8 ">
+                <dt>
+                  <span className="sr-only">Número</span>
+                </dt>
+                <dd className="flex text-base text-rtSecondary">
+                  <PhoneIcon className="flex-shrink-0 w-6 h-6 text-rtSecondary" aria-hidden="true" />
+                  <span className="ml-3">{phone}</span>
+                </dd>
+                <dt>
+                  <span className="sr-only">Email</span>
+                </dt>
+                <dd className="flex text-base text-rtSecondary">
+                  <MailIcon className="flex-shrink-0 w-6 h-6 text-rtSecondary" aria-hidden="true" />
+                  <span className="ml-3">{email}</span>
+                </dd>
+              </dl>
             </div>
           </div>
           <div className="mt-12 relative text-base max-w-prose mx-auto lg:mt-0 lg:max-w-none">
@@ -78,7 +77,7 @@ const GroupPost = ({
               </defs>
               <rect width={404} height={384} fill="url(#bedc54bc-7371-44a2-a2bc-dc68d819ae60)" />
             </svg>
-            <blockquote className="relative bg-gray-900 rounded-lg shadow-lg w-96 min-w-full">
+            <blockquote className="relative bg-gray-200 rounded-lg shadow-lg w-96 min-w-full">
               <div className="rounded-t-lg px-6 py-4">
                 <div className="relative">
                   <GatsbyImage
@@ -87,7 +86,7 @@ const GroupPost = ({
                   />
                 </div>
               </div>
-              <cite className="relative flex items-center justify-center bg-rtSecondary rounded-b-lg not-italic py-5 px-6">
+              <cite className="relative flex items-center justify-center bg-gray-900 rounded-b-lg not-italic py-5 px-6">
                 <a href={facebook} target="__blank" className="text-white hover:text-gray-300 mr-4">
                   <span className="sr-only">Facebook</span>
                   <svg fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6" aria-hidden="true">
