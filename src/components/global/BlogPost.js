@@ -115,7 +115,6 @@ BlogPost.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
 }
 
 export default BlogPost
