@@ -188,7 +188,8 @@ const Content = ({ data }) => {
               {/* Contact form */}
               <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
                 <h3 className="text-lg font-medium text-warm-gray-900">Envíanos tus inquietudes</h3>
-                <form action="#" method="POST" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                <form className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8" data-netlify="true" name="formContact" method="post" onSubmit="submit">
+                  <input type="hidden" name="form-name" value="formContact" />
                   <div>
                     <label htmlFor="first_name" className="block text-sm font-medium text-warm-gray-900">
                       Nombre
