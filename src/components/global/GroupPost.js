@@ -4,6 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
 
 import ContentHTML from './ContentHTML'
+import ReturnPrevButton from '../global/ReturnPrevButton'
 
 const GroupPost = ({
   content,
@@ -53,6 +54,7 @@ const GroupPost = ({
                 </dd>
               </dl>
             </div>
+            <ReturnPrevButton />
           </div>
           <div className="mt-12 relative text-base max-w-prose mx-auto lg:mt-0 lg:max-w-none">
             <svg

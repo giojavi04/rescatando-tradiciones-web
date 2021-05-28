@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 import ContentHTML from '../global/ContentHTML'
+import ReturnPrevButton from '../global/ReturnPrevButton'
 
 const BlogPost = ({
   content,
@@ -104,6 +105,7 @@ const BlogPost = ({
             <figcaption className="mt-2">{date}</figcaption>
           </figure>
           <ContentHTML content={content} />
+          <ReturnPrevButton />
         </div>
       </div>
     </div>
