@@ -26,43 +26,66 @@ const NavBar = () => {
       {({ open }) => (
         <>
           <div className="bg-gray-900 pt-6 pb-4">
-            <nav
-              className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
-              aria-label="Global"
+            <Transition
+              appear={true}
+              show={true}
             >
-              <div className="flex items-center flex-1">
-                <div className="flex items-center justify-between w-full md:w-auto">
-                  <Link to="/">
-                    <span className="sr-only">Workflow</span>
-                    <img
-                      className="h-10 w-auto sm:h-12"
-                      src={logoWhite}
-                      alt="Rescatando Tradiciones"
-                    />
-                  </Link>
-                  <div className="-mr-2 flex items-center md:hidden">
-                    <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
-                      <span className="sr-only">Open main menu</span>
-                      <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                    </Popover.Button>
+              <nav
+                className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
+                aria-label="Global"
+              >
+                <div className="flex items-center flex-1">
+                  <div className="flex items-center justify-between w-full md:w-auto">
+                    <Transition.Child
+                      enter="transition-opacity ease-linear duration-300"
+                      enterFrom="opacity-0"
+                      enterTo="opacity-100"
+                      leave="transition-opacity ease-linear duration-300"
+                      leaveFrom="opacity-100"
+                      leaveTo="opacity-0"
+                    >
+                      <Link to="/">
+                        <span className="sr-only">Workflow</span>
+                        <img
+                          className="h-10 w-auto sm:h-12"
+                          src={logoWhite}
+                          alt="Rescatando Tradiciones"
+                        />
+                      </Link>
+                    </Transition.Child>
+                    <div className="-mr-2 flex items-center md:hidden">
+                      <Popover.Button className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
+                        <span className="sr-only">Open main menu</span>
+                        <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                      </Popover.Button>
+                    </div>
+                  </div>
+                  <div className="hidden space-x-8 md:flex md:ml-10">
                   </div>
                 </div>
-                <div className="hidden space-x-8 md:flex md:ml-10">
-                </div>
-              </div>
-              <div className="hidden md:flex md:items-center md:space-x-6">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.to}
-                    className="text-base font-medium text-white hover:text-gray-300"
-                    activeClassName="text-gray-300"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </nav>
+                <Transition.Child
+                  enter="transition-opacity ease-linear duration-500"
+                  enterFrom="opacity-0"
+                  enterTo="opacity-100"
+                  leave="transition-opacity ease-linear duration-300"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <div className="hidden md:flex md:items-center md:space-x-6">
+                    {navigation.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.to}
+                        className="text-base font-medium text-white hover:text-gray-300"
+                        activeClassName="text-gray-300"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </Transition.Child>
+              </nav>
+            </Transition>
           </div>
 
           <Transition
