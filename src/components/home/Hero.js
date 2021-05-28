@@ -60,7 +60,8 @@ const Hero = ({ data }) => {
                   <div className="mt-10 sm:mt-12">
                     {
                       !submitted ? (
-                        <form className="sm:max-w-xl sm:mx-auto lg:mx-0" data-netlify="true" name="formHero" method="post">
+                        <form className="sm:max-w-xl sm:mx-auto lg:mx-0" data-netlify="true" name="formHero" method="post" onSubmit="submit">
+                          <input type="hidden" name="form-name" value="formHero" />
                           <div className="sm:flex">
                             <div className="min-w-0 flex-1">
                               <label htmlFor="email" className="sr-only">
