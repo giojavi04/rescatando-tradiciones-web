@@ -93,7 +93,7 @@ const BlogPost = ({
           </h1>
         </div>
         <div className="mt-6 text-lg max-w-prose mx-auto text-gray-500">
-          <figure className="mb-4">
+          <figure className="mb-8">
             <GatsbyImage
               className="w-full rounded-lg"
               image={image}
@@ -101,7 +101,7 @@ const BlogPost = ({
               width={1310}
               height={873}
             />
-            <figcaption>{date}</figcaption>
+            <figcaption className="mt-2">{date}</figcaption>
           </figure>
           <ContentHTML content={content} />
         </div>
