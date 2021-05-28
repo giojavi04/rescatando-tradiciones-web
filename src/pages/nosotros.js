@@ -1,25 +1,61 @@
 import * as React from "react"
-import { Helmet } from "react-helmet"
+import { graphql } from 'gatsby'
 
+import Seo from '../components/global/Seo'
 import HeaderPage from '../components/global/HeaderPage'
 import Content from '../components/about/content'
 import Team from '../components/about/team'
 
-import headerImg from '../images/nosotros/about-header.png'
-
 // markup
-const AboutPage = () => {
+const AboutPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
+
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Rescatando Tradiciones | Nosotros</title>
-      </Helmet>
-      <HeaderPage imgSrc={headerImg} title="Nosotros" description="Somos la escencia de la tradición" />
-      <Content />
-      <Team />
+      <Seo title={frontmatter.aboutTitle} />
+      <HeaderPage image={frontmatter.aboutImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.aboutTitle} description={frontmatter.aboutSubHeader} />
+      <Content data={frontmatter} />
+      <Team data={frontmatter.aboutTeam} />
     </>
   )
 }
+
+export const pageQuery = graphql`
+  query NosotrosPageTemplate {
+    markdownRemark(frontmatter: { aboutTitle: { eq: "Nosotros" }}) {
+      frontmatter {
+        aboutTitle
+        aboutImageHeader {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+        aboutSubHeader
+        aboutDescription
+        aboutImageContent {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+        aboutImageDescription
+        aboutTeam {
+          title
+          description
+          team {
+            name
+            role
+            twitterUrl
+            linkedinUrl
+            image {
+              childImageSharp {
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default AboutPage

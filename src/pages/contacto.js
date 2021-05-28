@@ -1,25 +1,51 @@
 import * as React from "react"
-import { Helmet } from "react-helmet"
+import { graphql } from 'gatsby'
 
+import Seo from '../components/global/Seo'
 import HeaderPage from '../components/global/HeaderPage'
 import Content from '../components/contact/content'
 import Info from '../components/contact/info'
 
-import contactImg from '../images/contacto/contact-header.png'
-
 // markup
-const ContactPage = () => {
+const ContactPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
+
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Rescatando Tradiciones | Contacto</title>
-      </Helmet>
-      <HeaderPage imgSrc={contactImg} title="Contacto" description="Si deseas conocer más sobre nosotros, llena el formulario." />
-      <Content />
-      <Info />
+      <Seo title={frontmatter.contactTitle} />
+      <HeaderPage image={frontmatter.contactImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.contactTitle} description={frontmatter.contactSubHeader} />
+      <Content data={frontmatter} />
+      <Info data={frontmatter.contactAdditionalInfo} />
     </>
   )
 }
+
+export const pageQuery = graphql`
+  query ContactPageTemplate {
+    markdownRemark(frontmatter: { contactTitle: { eq: "Contacto" }}) {
+      frontmatter {
+        contactTitle
+        contactSubHeader
+        contactImageHeader {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+        contactDescription
+        contactContentForm
+        contactPhone
+        contactMail
+        contactAdditionalInfo {
+          title
+          description
+          item {
+            name
+            description
+          }
+        }
+      }
+    }
+  }
+`
 
 export default ContactPage

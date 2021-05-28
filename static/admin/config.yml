@@ -1,0 +1,291 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
+local_backend: true
+locale: "es"
+publish_mode: editorial_workflow
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+
+  - name: "groups"
+    label: "Grupos"
+    folder: "src/pages/grupos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "group-page",
+        }
+      - label: "Tipo"
+        name: "groupType"
+        widget: "select"
+        options:
+          - { label: "Banda", value: "BANDA" }
+          - { label: "Bastoneras", value: "BASTONERAS" }
+          - { label: "Danza", value: "DANZA" }
+          - { label: "Varios", value: "VARIOS" }
+      - { label: "Imagen Header", name: groupImageHeader, widget: image }
+      - { label: "Nombre de agrupación", name: title, widget: string }
+      - { label: "Lema", name: groupMotto, widget: string }
+      - { label: Descripción, name: groupDescription, widget: text }
+      - { label: "Logo de agrupación", name: groupLogo, widget: image }
+      - { label: Body, name: body, widget: markdown }
+      - { label: "Facebook url", name: groupLinkFacebook, widget: string, required: false }
+      - { label: "Instagram url", name: groupLinkInstagram, widget: string, required: false }
+      - { label: "Email", name: groupEmail, widget: string, required: false }
+      - { label: "Teléfono", name: groupPhone, widget: string, required: false }
+
+  - name: "events"
+    label: "Eventos"
+    folder: "src/pages/eventos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "event-page",
+        }
+      - { label: "Image Header", name: eventImageHeader, widget: image }
+      - { label: Título, name: title, widget: string }
+      - {
+          label: "Sub Header",
+          name: eventSubHeader,
+          widget: string,
+          required: false,
+        }
+      - { label: "Logo del Evento", name: eventLogoEvent, widget: image }
+      - { label: "Descripción corta", name: eventResume, widget: string }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Home Page"
+        name: "index"
+        fields:
+          - { label: Title, name: homeTitle, widget: string }
+          - {
+              label: Hero,
+              name: homeHero,
+              widget: object,
+              fields:
+                [
+                  { label: Description, name: description, widget: markdown },
+                  { label: Image, name: image, widget: image },
+                ],
+            }
+          - {
+              label: Intro,
+              name: homeIntro,
+              widget: object,
+              fields:
+                [
+                  { label: Image, name: image, widget: image },
+                  { label: Description, name: description, widget: markdown },
+                  { label: Frase, name: phrase, widget: text },
+                  { label: Autor, name: author, widget: string },
+                ],
+            }
+          - {
+              label: Eventos,
+              name: homeEvents,
+              widget: object,
+              fields:
+                [
+                  { label: Título, name: title, widget: string },
+                  { label: Description, name: description, widget: markdown },
+                ],
+            }
+          - {
+              label: Testimonio,
+              name: homeTestimonial,
+              widget: object,
+              fields:
+                [
+                  { label: Image, name: image, widget: image },
+                  { label: Frase, name: phrase, widget: text },
+                  { label: Autor, name: author, widget: string },
+                  { label: Cargo, name: charge, widget: string },
+                ],
+            }
+          - {
+              label: Posts,
+              name: homePosts,
+              widget: object,
+              fields:
+                [
+                  { label: Título, name: title, widget: string },
+                  { label: Description, name: description, widget: markdown },
+                ],
+            }
+          - {
+              label: CTA,
+              name: homeCta,
+              widget: object,
+              fields:
+                [
+                  { label: Título, name: title, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+      - file: "src/pages/about.md"
+        label: "Nosotros"
+        name: "about"
+        fields:
+          - { label: "Image Header", name: aboutImageHeader, widget: image }
+          - { label: Título, name: aboutTitle, widget: string }
+          - { label: "Sub Header", name: aboutSubHeader, widget: string }
+          - { label: Descripción, name: aboutDescription, widget: markdown }
+          - {
+              label: "Imagen de Contenido",
+              name: aboutImageContent,
+              widget: image,
+            }
+          - {
+              label: "Image Descripción",
+              name: aboutImageDescription,
+              widget: string,
+            }
+          - {
+              label: Nuestro Equipo,
+              name: aboutTeam,
+              widget: object,
+              fields:
+                [
+                  { label: Título, name: title, widget: string },
+                  { label: Description, name: description, widget: markdown },
+                  {
+                    label: Equipo,
+                    name: team,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Imagen, name: image, widget: image },
+                        { label: Nombre, name: name, widget: string },
+                        { label: Cargo, name: role, widget: string },
+                        {
+                          label: "Twitter Url",
+                          name: twitterUrl,
+                          widget: string,
+                        },
+                        {
+                          label: "Linkedin Url",
+                          name: linkedinUrl,
+                          widget: string,
+                        },
+                      ],
+                  },
+                ],
+            }
+      - file: "src/pages/pagesGlobal/grupos.md"
+        label: "Grupos"
+        name: "groups"
+        fields:
+          - { label: "Image Header", name: groupsImageHeader, widget: image }
+          - { label: Título, name: groupsTitle, widget: string }
+          - { label: "Sub Header", name: groupsSubHeader, widget: string }
+          - {
+              label: Descripción,
+              name: groupsDescription,
+              widget: markdown,
+              required: false,
+            }
+      - file: "src/pages/pagesGlobal/eventos.md"
+        label: "Eventos"
+        name: "events"
+        fields:
+          - { label: "Image Header", name: eventsImageHeader, widget: image }
+          - { label: Título, name: eventsTitle, widget: string }
+          - { label: "Sub Header", name: eventsSubHeader, widget: string }
+          - {
+              label: Descripción,
+              name: eventsDescription,
+              widget: markdown,
+              required: false,
+            }
+      - file: "src/pages/pagesGlobal/blog.md"
+        label: "Blog"
+        name: "blog"
+        fields:
+          - { label: "Image Header", name: blogImageHeader, widget: image }
+          - { label: Título, name: blogTitle, widget: string }
+          - { label: "Sub Header", name: blogSubHeader, widget: string }
+          - {
+              label: Descripción,
+              name: blogDescription,
+              widget: markdown,
+              required: false,
+            }
+      - file: "src/pages/contact.md"
+        label: "Contacto"
+        name: "contact"
+        fields:
+          - { label: "Image Header", name: contactImageHeader, widget: image }
+          - { label: Título, name: contactTitle, widget: string }
+          - { label: "Sub Header", name: contactSubHeader, widget: string }
+          - { label: Descripción, name: contactDescription, widget: markdown }
+          - {
+              label: Contenido Formulario,
+              name: contactContentForm,
+              widget: markdown,
+            }
+          - { label: Teléfono, name: contactPhone, widget: string }
+          - { label: Email, name: contactMail, widget: string }
+          - {
+              label: Información Adicional,
+              name: contactAdditionalInfo,
+              widget: object,
+              fields:
+                [
+                  { label: Título, name: title, widget: string },
+                  { label: Descripción, name: description, widget: markdown },
+                  {
+                    label: Item,
+                    name: item,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Nombre, name: name, widget: string },
+                        {
+                          label: Descripción,
+                          name: description,
+                          widget: string,
+                        },
+                      ],
+                  },
+                ],
+            }
