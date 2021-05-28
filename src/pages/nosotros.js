@@ -13,7 +13,7 @@ const AboutPage = ({ data }) => {
   return (
     <>
       <Seo title={frontmatter.aboutTitle} />
-      <HeaderPage imgSrc={frontmatter.aboutImageHeader.childImageSharp.fluid.src} title={frontmatter.aboutTitle} description={frontmatter.aboutSubHeader} />
+      <HeaderPage image={frontmatter.aboutImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.aboutTitle} description={frontmatter.aboutSubHeader} />
       <Content data={frontmatter} />
       <Team data={frontmatter.aboutTeam} />
     </>
@@ -27,18 +27,14 @@ export const pageQuery = graphql`
         aboutTitle
         aboutImageHeader {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
         aboutSubHeader
         aboutDescription
         aboutImageContent {
           childImageSharp {
-            fluid(maxWidth: 1285, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
         aboutImageDescription
@@ -52,9 +48,7 @@ export const pageQuery = graphql`
             linkedinUrl
             image {
               childImageSharp {
-                fluid(maxWidth: 1024, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(quality: 100, layout: FULL_WIDTH)
               }
             }
           }

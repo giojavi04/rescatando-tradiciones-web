@@ -34,21 +34,17 @@ export const pageQuery = graphql`
         homeHero {
           description
           image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+            childImageSharp {
+              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
             }
           }
-        }
         }
         homeIntro {
           image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+            childImageSharp {
+              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
             }
           }
-        }
           phrase
           author
           description
@@ -59,12 +55,10 @@ export const pageQuery = graphql`
         }
         homeTestimonial {
           image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+            childImageSharp {
+              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
             }
           }
-        }
           phrase
           author
           charge

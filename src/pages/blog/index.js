@@ -12,7 +12,7 @@ const BlogPage = ({ data }) => {
   return (
     <>
       <Seo title={frontmatter.blogTitle} />
-      <HeaderPage imgSrc={frontmatter.blogImageHeader.childImageSharp.fluid.src} title={frontmatter.blogTitle} description={frontmatter.blogSubHeader} />
+      <HeaderPage image={frontmatter.blogImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.blogTitle} description={frontmatter.blogSubHeader} />
       <Content data={frontmatter.blogDescription} />
     </>
   )
@@ -25,9 +25,7 @@ export const pageQuery = graphql`
         blogTitle
         blogImageHeader {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
         blogSubHeader

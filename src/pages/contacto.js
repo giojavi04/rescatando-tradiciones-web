@@ -13,7 +13,7 @@ const ContactPage = ({ data }) => {
   return (
     <>
       <Seo title={frontmatter.contactTitle} />
-      <HeaderPage imgSrc={frontmatter.contactImageHeader.childImageSharp.fluid.src} title={frontmatter.contactTitle} description={frontmatter.contactSubHeader} />
+      <HeaderPage image={frontmatter.contactImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.contactTitle} description={frontmatter.contactSubHeader} />
       <Content data={frontmatter} />
       <Info data={frontmatter.contactAdditionalInfo} />
     </>
@@ -28,9 +28,7 @@ export const pageQuery = graphql`
         contactSubHeader
         contactImageHeader {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
         contactDescription

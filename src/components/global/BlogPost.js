@@ -1,11 +1,14 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import ContentHTML from '../global/ContentHTML'
 
 const BlogPost = ({
   content,
   description,
+  date,
+  image,
   tags,
   title,
 }) => {
@@ -89,7 +92,17 @@ const BlogPost = ({
             </span>
           </h1>
         </div>
-        <div className="mt-6 prose max-w-prose prose-indigo prose-lg text-gray-500 mx-auto">
+        <div className="mt-6 text-lg max-w-prose mx-auto text-gray-500">
+          <figure className="mb-4">
+            <GatsbyImage
+              className="w-full rounded-lg"
+              image={image}
+              alt={title}
+              width={1310}
+              height={873}
+            />
+            <figcaption>{date}</figcaption>
+          </figure>
           <ContentHTML content={content} />
         </div>
       </div>

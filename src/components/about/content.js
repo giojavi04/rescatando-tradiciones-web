@@ -1,4 +1,5 @@
 import * as React from "react"
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import ContentHTML from '../global/ContentHTML'
 
@@ -45,9 +46,9 @@ const Content = ({ data }) => {
             <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
               <figure>
                 <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
-                  <img
+                  <GatsbyImage
                     className="rounded-lg shadow-lg object-cover object-center"
-                    src={data.aboutImageContent.childImageSharp.fluid.src}
+                    image={data.aboutImageContent.childImageSharp.gatsbyImageData}
                     alt={data.aboutImageDescription}
                     width={1184}
                     height={1376}

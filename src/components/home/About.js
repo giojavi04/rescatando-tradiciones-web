@@ -1,5 +1,6 @@
 import * as React from 'react'
 import ContentHTML from '../global/ContentHTML'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // const stats = [
 //   { label: 'Bandas', value: '20' },
@@ -41,9 +42,9 @@ const About = ({ data }) => {
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
             {/* Testimonial card*/}
             <div className="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
-              <img
+              <GatsbyImage
                 className="absolute inset-0 h-full w-full object-cover"
-                src={data.image.childImageSharp.fluid.src}
+                image={data.image.childImageSharp.gatsbyImageData}
                 alt={data.author}
               />
               <div className="absolute inset-0 bg-rtSecondary" style={{ mixBlendMode: 'multiply' }} />

@@ -1,13 +1,14 @@
 import * as React from "react"
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // markup
-const HeaderPage = ({ imgSrc, title, description }) => {
+const HeaderPage = ({ image, title, description }) => {
   return (
     <div className="relative bg-rtSecondary lg:overflow-hidden">
       <div className="absolute inset-0">
-        <img
+        <GatsbyImage
           className="w-full h-full object-cover"
-          src={imgSrc}
+          image={image}
           alt={title}
         />
         <div className="absolute inset-0 bg-gray-500" style={{ mixBlendMode: 'multiply' }} aria-hidden="true" />

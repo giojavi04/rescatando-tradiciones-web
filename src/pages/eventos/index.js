@@ -12,7 +12,7 @@ const EventsPage = ({ data }) => {
   return (
     <>
       <Seo title={frontmatter.eventsTitle} />
-      <HeaderPage imgSrc={frontmatter.eventsImageHeader.childImageSharp.fluid.src} title={frontmatter.eventsTitle} description={frontmatter.eventsSubHeader} />
+      <HeaderPage image={frontmatter.eventsImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.eventsTitle} description={frontmatter.eventsSubHeader} />
       <Content data={frontmatter.eventsDescription} />
     </>
   )
@@ -25,9 +25,7 @@ export const pageQuery = graphql`
         eventsTitle
         eventsImageHeader {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
         eventsSubHeader

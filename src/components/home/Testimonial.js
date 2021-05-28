@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 //markup
 const Testimonial = ({ data }) => {
@@ -9,9 +10,9 @@ const Testimonial = ({ data }) => {
           <div aria-hidden="true" className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden" />
           <div className="relative mx-auto max-w-md px-4 z-10 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
             <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-              <img
+              <GatsbyImage
                 className="object-cover lg:h-full lg:w-full"
-                src={data.image.childImageSharp.fluid.src}
+                image={data.image.childImageSharp.gatsbyImageData}
                 alt={data.author}
               />
             </div>

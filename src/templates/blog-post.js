@@ -7,11 +7,12 @@ import BlogPost from '../components/global/BlogPost'
 
 const BlogPostTemplate = ({ data }) => {
   const { markdownRemark: post } = data
+  console.log(post)
 
   return (
     <>
       <Seo title={post.frontmatter.title} description={post.frontmatter.description} />
-      <BlogPost title={post.frontmatter.title} content={post.html} tags={post.frontmatter.tags} />
+      <BlogPost title={post.frontmatter.title} date={post.frontmatter.date} image={post.frontmatter.featuredimage.childImageSharp.gatsbyImageData} content={post.html} tags={post.frontmatter.tags} />
     </>
   )
 }
@@ -29,6 +30,11 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        featuredimage {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
         title
         description
         tags

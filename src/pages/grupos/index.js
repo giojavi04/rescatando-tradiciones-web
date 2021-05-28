@@ -12,7 +12,7 @@ const GroupsPage = ({ data }) => {
   return (
     <>
       <Seo title={frontmatter.groupsTitle} />
-      <HeaderPage imgSrc={frontmatter.groupsImageHeader.childImageSharp.fluid.src} title={frontmatter.groupsTitle} description={frontmatter.groupsSubHeader} />
+      <HeaderPage image={frontmatter.groupsImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.groupsTitle} description={frontmatter.groupsSubHeader} />
       <Content data={frontmatter.groupsDescription} />
     </>
   )
@@ -25,9 +25,7 @@ export const pageQuery = graphql`
         groupsTitle
         groupsImageHeader {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
         groupsSubHeader

@@ -1,12 +1,12 @@
 import * as React from "react"
 import { Link } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import ContentHTML from '../global/ContentHTML'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 
 // markup
 const Hero = ({ data }) => {
-  console.log(data.image.childImageSharp.fluid.src)
   return (
     <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
       <div className="mx-auto max-w-7xl lg:px-8">
@@ -56,9 +56,9 @@ const Hero = ({ data }) => {
           </div>
           <div className="m-0 lg:relative">
             <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
-              <img
+              <GatsbyImage
                 className="w-full"
-                src={!!data.image.childImageSharp ? data.image.childImageSharp.fluid.src : data.image}
+                image={data.image.childImageSharp.gatsbyImageData}
                 alt="Rescatando Tradiciones"
               />
             </div>

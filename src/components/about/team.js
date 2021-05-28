@@ -1,4 +1,5 @@
 import * as React from "react"
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 // markup
 const Team = ({ data }) => {
@@ -16,7 +17,7 @@ const Team = ({ data }) => {
             {data.team.map((person) => (
               <li key={person.name}>
                 <div className="space-y-6">
-                  <img className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src={person.image.childImageSharp.fluid.src} alt="" />
+                  <GatsbyImage className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" image={person.image.childImageSharp.gatsbyImageData} alt="" />
                   <div className="space-y-2">
                     <div className="text-lg leading-6 font-medium space-y-1">
                       <h3>{person.name}</h3>
