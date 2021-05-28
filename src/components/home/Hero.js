@@ -38,7 +38,7 @@ const Hero = ({ data }) => {
                   </Link>
                   <ContentHTML content={data.description} />
                   <div className="mt-10 sm:mt-12">
-                    <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
+                    <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0" data-netlify="true">
                       <div className="sm:flex">
                         <div className="min-w-0 flex-1">
                           <label htmlFor="email" className="sr-only">
