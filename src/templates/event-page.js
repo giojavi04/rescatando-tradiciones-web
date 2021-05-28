@@ -13,7 +13,7 @@ const EventTemplate = ({ data }) => {
     <>
       <Seo title={post.frontmatter.title} description={post.frontmatter.eventResume} />
       <HeaderPage image={post.frontmatter.eventImageHeader.childImageSharp.gatsbyImageData} title={post.frontmatter.title} description={post.frontmatter.eventSubHeader} />
-      <EventPost title={post.frontmatter.title} logo={post.frontmatter.eventLogoEvent.childImageSharp.gatsbyImageData} content={post.frontmatter.eventDescription} />
+      <EventPost title={post.frontmatter.title} logo={post.frontmatter.eventLogoEvent.childImageSharp.gatsbyImageData} content={post.html} />
     </>
   )
 }
