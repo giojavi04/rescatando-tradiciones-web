@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Transition } from '@headlessui/react'
@@ -8,26 +8,6 @@ import { ChevronRightIcon } from '@heroicons/react/solid'
 
 // markup
 const Hero = ({ data }) => {
-  const { submitted, setSubmitted } = useState(false)
-
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&")
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": event.target.getAttribute("name"),
-        ...name
-      })
-    }).then(() => setSubmitted(true)).catch(error => alert(error))
-  }
-
   return (
     <div className="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
       <div className="mx-auto max-w-7xl lg:px-8">
@@ -58,40 +38,34 @@ const Hero = ({ data }) => {
                   </Link>
                   <ContentHTML content={data.description} />
                   <div className="mt-10 sm:mt-12">
-                    {
-                      !submitted ? (
-                        <form className="sm:max-w-xl sm:mx-auto lg:mx-0" data-netlify="true" name="formHero" method="post" onSubmit="submit">
-                          <input type="hidden" name="form-name" value="formHero" />
-                          <div className="sm:flex">
-                            <div className="min-w-0 flex-1">
-                              <label htmlFor="email" className="sr-only">
-                                Email
+                    <form className="sm:max-w-xl sm:mx-auto lg:mx-0" data-netlify="true" name="infoHome" method="post" onSubmit="submit">
+                      <input type="hidden" name="form-name" value="infoHome" />
+                      <div className="sm:flex">
+                        <div className="min-w-0 flex-1">
+                          <label htmlFor="email" className="sr-only">
+                            Email
                               </label>
-                              <input
-                                id="email"
-                                type="email"
-                                name='email'
-                                placeholder="Ingresa tu email"
-                                className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
-                              />
-                            </div>
-                            <div className="mt-3 sm:mt-0 sm:ml-3">
-                              <button
-                                type="submit"
-                                className="block w-full py-3 px-4 rounded-md shadow bg-black text-white font-medium hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
-                              >
-                                Solicita información
+                          <input
+                            id="email"
+                            type="email"
+                            name='email'
+                            placeholder="Ingresa tu email"
+                            className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
+                          />
+                        </div>
+                        <div className="mt-3 sm:mt-0 sm:ml-3">
+                          <button
+                            type="submit"
+                            className="block w-full py-3 px-4 rounded-md shadow bg-black text-white font-medium hover:from-teal-600 hover:to-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400 focus:ring-offset-gray-900"
+                          >
+                            Solicita información
                               </button>
-                            </div>
-                          </div>
-                          <p className="mt-3 text-sm text-gray-300 sm:mt-4">
-                            ¿Deseas conocer más acerca de nuestro colectivo?. Ingresa tu email, y nos comunicaremos contigo.
+                        </div>
+                      </div>
+                      <p className="mt-3 text-sm text-gray-300 sm:mt-4">
+                        ¿Deseas conocer más acerca de nuestro colectivo?. Ingresa tu email, y nos comunicaremos contigo.
                           </p>
-                        </form>
-                      ) : (
-                        <h3>El formulario se a enviado, pronto nos comunicaremos contigo.</h3>
-                      )
-                    }
+                    </form>
                   </div>
                 </div>
               </div>

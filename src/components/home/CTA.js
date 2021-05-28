@@ -53,7 +53,8 @@ const Cta = ({ data }) => {
                 {data.description}
               </p>
             </div>
-            <form action="#" className="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
+            <form action="#" className="mt-12 sm:mx-auto sm:max-w-lg sm:flex" data-netlify="true" name="infoEventos" method="post" onSubmit="submit">
+              <input type="hidden" name="form-name" value="infoEventos" />
               <div className="min-w-0 flex-1">
                 <label htmlFor="cta_email" className="sr-only">
                   Email address
@@ -71,7 +72,7 @@ const Cta = ({ data }) => {
                   className="block w-full rounded-md border border-transparent px-5 py-3 bg-gray-900 text-base font-medium text-white shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-rose-500 sm:px-10"
                 >
                   Notificarme
-                    </button>
+                </button>
               </div>
             </form>
           </div>
