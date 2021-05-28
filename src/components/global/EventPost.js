@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
 import ContentHTML from '../global/ContentHTML'
+import ReturnPrevButton from '../global/ReturnPrevButton'
 
 const EventPost = ({
   content,
@@ -56,6 +57,7 @@ const EventPost = ({
               {title}
             </h2>
             <ContentHTML content={content} />
+            <ReturnPrevButton />
           </div>
         </div>
       </div>

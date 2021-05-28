@@ -55,8 +55,9 @@ const About = ({ data }) => {
               <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
                 {/* Testimonial card*/}
                 <div className="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
+                  {/* <img sizes={getImageSrc} className="absolute inset-0 h-full w-full object-cover" /> */}
                   <GatsbyImage
-                    className="absolute inset-0 h-full w-full object-cover"
+                    className="inset-0 h-full w-full object-cover RT--absulute"
                     image={data.image.childImageSharp.gatsbyImageData}
                     alt={data.author}
                   />

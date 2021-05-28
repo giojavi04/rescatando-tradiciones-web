@@ -16,3 +16,7 @@
     @apply font-heading;
   }
 }
+
+.RT--absulute {
+  position: absolute !important;
+}
