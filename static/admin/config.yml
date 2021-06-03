@@ -55,6 +55,7 @@ collections:
           - { label: "Bastoneras", value: "BASTONERAS" }
           - { label: "Danza", value: "DANZA" }
           - { label: "Varios", value: "VARIOS" }
+      - { label: "Activado", name: "groupActive", widget: "boolean" }
       - { label: "Imagen Header", name: groupImageHeader, widget: image }
       - { label: "Nombre de agrupación", name: title, widget: string }
       - { label: "Lema", name: groupMotto, widget: string }
@@ -88,6 +89,7 @@ collections:
         }
       - { label: "Logo del Evento", name: eventLogoEvent, widget: image }
       - { label: "Descripción corta", name: eventResume, widget: string }
+      - { label: "Activado", name: "eventActive", widget: "boolean" }
       - { label: Body, name: body, widget: markdown }
 
   - name: "pages"

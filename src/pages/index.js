@@ -11,14 +11,16 @@ import Cta from '../components/home/CTA';
 
 // markup
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.home
+  const groupsData = data.groups.edges
+  const eventsData = data.events.edges
 
   return (
     <>
       <Seo title="Home" />
       <Hero data={frontmatter.homeHero} />
-      <About data={frontmatter.homeIntro} />
-      <Events data={frontmatter.homeEvents} />
+      <About data={frontmatter.homeIntro} groups={groupsData} />
+      <Events data={frontmatter.homeEvents} events={eventsData} />
       <Testimonial data={frontmatter.homeTestimonial} />
       <Blog data={frontmatter.homePosts} />
       <Cta data={frontmatter.homeCta} />
@@ -27,8 +29,8 @@ const IndexPage = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { homeTitle: { eq: "Home" }}) {
+  query {
+    home: markdownRemark(frontmatter: { homeTitle: { eq: "Home" }}) {
       frontmatter {
         homeTitle
         homeHero {
@@ -70,6 +72,25 @@ export const pageQuery = graphql`
         homeCta {
           title
           description
+        }
+      }
+    }
+    groups: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "group-page"}}}) {
+      edges {
+        node {
+          frontmatter {
+            groupType
+          }
+        }
+      }
+    }
+    events: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "event-page"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            eventDescription
+          }
         }
       }
     }

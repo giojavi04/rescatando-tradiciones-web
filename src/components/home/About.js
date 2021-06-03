@@ -1,6 +1,9 @@
-import * as React from 'react'
-import ContentHTML from '../global/ContentHTML'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
+
+import ContentHTML from '../global/ContentHTML'
+import { GROUPS_TYPES, GROUP_AVAILABLES } from '../../constants'
 import { Transition } from '@headlessui/react'
 
 // const stats = [
@@ -11,7 +14,21 @@ import { Transition } from '@headlessui/react'
 // ]
 
 //markup
-const About = ({ data }) => {
+const About = ({ data, groups }) => {
+  const [groupAll, setGroupAll] = useState([])
+
+  const groupsBy = (data) => {
+    return data.reduce((acc, curr) => {
+      if (!acc[curr.node.frontmatter.groupType]) acc[curr.node.frontmatter.groupType] = []; //If this type wasn't previously stored
+      acc[curr.node.frontmatter.groupType].push(curr);
+      return acc;
+    }, {});
+  };
+
+  useEffect(() => {
+    setGroupAll(groupsBy(groups))
+  }, [groups])
+
   return (
     <div className="relative mt-20">
       <Transition
@@ -110,21 +127,21 @@ const About = ({ data }) => {
               </div>
 
               {/* Stats section */}
-              {/* <div className="mt-10">
-            <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
-              {stats.map((stat) => (
-                <div key={stat.label} className="border-t-2 border-gray-100 pt-6">
-                  <dt className="text-base font-medium text-gray-500">{stat.label}</dt>
-                  <dd className="text-3xl font-extrabold tracking-tight text-gray-900">{stat.value}</dd>
+              <div className="mt-10">
+                <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
+                  {GROUP_AVAILABLES.map((group, i) => groupAll[group.name] && (
+                    <div key={i} className="border-t-2 border-gray-100 pt-6">
+                      <dt className="text-base font-medium text-gray-500">{GROUPS_TYPES[group.name].plural}</dt>
+                      <dd className="text-3xl font-extrabold tracking-tight text-gray-900">{groupAll[group.name].length}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <div className="mt-10">
+                  <Link to="/grupos" className="text-base font-medium text-rtSecondary">
+                    Conoce todas las agrupaciones aquí &rarr;
+                  </Link>
                 </div>
-              ))}
-            </dl>
-            <div className="mt-10">
-              <a href="#" className="text-base font-medium text-rtSecondary">
-                Conoce todas las agrupaciones aquí &rarr;
-                  </a>
-            </div>
-          </div> */}
+              </div>
             </div>
           </Transition.Child>
         </div>

@@ -1,9 +1,9 @@
 ---
 templateKey: group-page
-groupType: BASTONERAS
+groupType: BANDA
 groupActive: true
 groupImageHeader: /img/contact-header.png
-title: Bastoneras Egresadas Rescatando Tradiciones
+title: Banda Egresadas Rescatando Tradiciones
 groupMotto: A un grupo de amigos nadie los vence
 groupDescription: sadsagxczbcbxzbcxzxzbbcxzxzbc
 groupLogo: /img/home-hero.png
