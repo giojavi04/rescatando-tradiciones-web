@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 
 import {
   UserGroupIcon,
@@ -26,7 +27,9 @@ const Events = ({ data, events }) => {
                         <UserGroupIcon className="h-6 w-6 text-white" aria-hidden="true" />
                       </span>
                     </div>
-                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">{event.node.frontmatter.title}</h3>
+                    <Link to={event.node.fields.slug}>
+                      <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight hover:text-rtSecondary">{event.node.frontmatter.title}</h3>
+                    </Link>
                     <p className="mt-5 text-base text-gray-500">{event.node.frontmatter.eventDescription}</p>
                   </div>
                 </div>

@@ -14,6 +14,7 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.home
   const groupsData = data.groups.edges
   const eventsData = data.events.edges
+  const postsData = data.posts.edges
 
   return (
     <>
@@ -22,7 +23,7 @@ const IndexPage = ({ data }) => {
       <About data={frontmatter.homeIntro} groups={groupsData} />
       <Events data={frontmatter.homeEvents} events={eventsData} />
       <Testimonial data={frontmatter.homeTestimonial} />
-      <Blog data={frontmatter.homePosts} />
+      <Blog data={frontmatter.homePosts} posts={postsData} />
       <Cta data={frontmatter.homeCta} />
     </>
   )
@@ -87,6 +88,9 @@ export const pageQuery = graphql`
     events: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "event-page"}}}) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
             eventDescription
@@ -94,6 +98,32 @@ export const pageQuery = graphql`
         }
       }
     }
+    posts: allMarkdownRemark(
+          limit: 3
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 400)
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                templateKey
+                date(formatString: "MMMM DD, YYYY")
+                featuredpost
+                featuredimage {
+                  childImageSharp {
+                    gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+                  }
+                }
+              }
+            }
+          }
+        }
   }
 `
 
