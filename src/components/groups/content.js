@@ -14,13 +14,13 @@ const Content = ({ data, groups }) => {
         </div>
         <div className="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
           {groups.map(group => (
-            <Link to={group.node.fields.slug}>
+            <Link key={group.node.frontmatter.title} to={group.node.fields.slug}>
               <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-100">
                 <GatsbyImage
                   className="max-h-64"
                   imgClassName="filter grayscale hover:grayscale-0"
                   image={group.node.frontmatter.groupLogo.childImageSharp.gatsbyImageData}
-                  alt={group.node.frontmatter.groupLogo.title}
+                  alt={group.node.frontmatter.title}
                 />
               </div>
             </Link>

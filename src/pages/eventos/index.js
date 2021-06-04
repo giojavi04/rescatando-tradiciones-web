@@ -7,20 +7,21 @@ import Content from '../../components/events/content'
 
 // markup
 const EventsPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.static
+  const events = data.events.edges
 
   return (
     <>
       <Seo title={frontmatter.eventsTitle} />
       <HeaderPage image={frontmatter.eventsImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.eventsTitle} description={frontmatter.eventsSubHeader} />
-      <Content data={frontmatter.eventsDescription} />
+      <Content data={frontmatter.eventsDescription} events={events} />
     </>
   )
 }
 
 export const pageQuery = graphql`
-  query EventosPageTemplate {
-    markdownRemark(frontmatter: {eventsTitle: {eq: "Eventos"}}) {
+  query {
+    static: markdownRemark(frontmatter: {eventsTitle: {eq: "Eventos"}}) {
       frontmatter {
         eventsTitle
         eventsImageHeader {
@@ -30,6 +31,23 @@ export const pageQuery = graphql`
         }
         eventsSubHeader
         eventsDescription
+      }
+    }
+    events: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "event-page"}}}) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            eventLogoEvent {
+              childImageSharp {
+                gatsbyImageData(quality: 100, width: 320, layout: CONSTRAINED)
+              }
+            }
+          }
+        }
       }
     }
   }
