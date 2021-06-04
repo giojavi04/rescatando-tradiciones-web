@@ -27,6 +27,7 @@ module.exports = {
     extend: {
       animation: ['responsive', 'motion-safe', 'motion-reduce'],
       translate: ['motion-safe'],
+      filter: ['hover', 'focus'],
     },
   },
   plugins: [],

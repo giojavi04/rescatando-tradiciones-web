@@ -7,20 +7,21 @@ import Content from '../../components/blog/content'
 
 // markup
 const BlogPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.static
+  const posts = data.posts.edges
 
   return (
     <>
       <Seo title={frontmatter.blogTitle} />
       <HeaderPage image={frontmatter.blogImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.blogTitle} description={frontmatter.blogSubHeader} />
-      <Content data={frontmatter.blogDescription} />
+      <Content data={frontmatter.blogDescription} posts={posts} />
     </>
   )
 }
 
 export const pageQuery = graphql`
-  query BlogPageTemplate {
-    markdownRemark(frontmatter: {blogTitle: {eq: "Blog"}}) {
+  query {
+    static: markdownRemark(frontmatter: {blogTitle: {eq: "Blog"}}) {
       frontmatter {
         blogTitle
         blogImageHeader {
@@ -32,6 +33,31 @@ export const pageQuery = graphql`
         blogDescription
       }
     }
+    posts: allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 400)
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                templateKey
+                date(formatString: "MMMM DD, YYYY")
+                featuredpost
+                featuredimage {
+                  childImageSharp {
+                    gatsbyImageData(quality: 100, width: 500, layout: CONSTRAINED)
+                  }
+                }
+              }
+            }
+          }
+        }
   }
 `
 

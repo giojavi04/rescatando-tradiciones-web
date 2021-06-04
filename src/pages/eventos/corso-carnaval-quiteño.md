@@ -3,9 +3,9 @@ eventActive: true
 eventDescription: xczbbzxcbcx
 templateKey: event-page
 eventImageHeader: /img/about-header.png
-title: Ronda Quiteña Sur
+title: Corso Carnaval Quiteño
 eventSubHeader: By Rescatando Tradiciones
-eventLogoEvent: /img/evento-logo-ronda-quitena-sur.png
+eventLogoEvent: /img/evento-logo-corso-carnaval-quiteno.png
 eventResume: Test de cuerpo de evento.....Curabitur arcu erat, accumsan id
   imperdiet et, porttitor at sem.
 templatePath: events
