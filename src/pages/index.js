@@ -117,7 +117,7 @@ export const pageQuery = graphql`
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+                    gatsbyImageData(quality: 100, width: 500, layout: CONSTRAINED)
                   }
                 }
               }
