@@ -7,20 +7,21 @@ import Content from '../../components/groups/content'
 
 // markup
 const GroupsPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.static
+  const groups = data.groups.edges
 
   return (
     <>
       <Seo title={frontmatter.groupsTitle} />
       <HeaderPage image={frontmatter.groupsImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.groupsTitle} description={frontmatter.groupsSubHeader} />
-      <Content data={frontmatter.groupsDescription} />
+      <Content data={frontmatter.groupsDescription} groups={groups} />
     </>
   )
 }
 
 export const pageQuery = graphql`
-  query GruposPageTemplate {
-    markdownRemark(frontmatter: {groupsTitle: {eq: "Grupos"}}) {
+  query {
+    static: markdownRemark(frontmatter: {groupsTitle: {eq: "Grupos"}}) {
       frontmatter {
         groupsTitle
         groupsImageHeader {
@@ -30,6 +31,23 @@ export const pageQuery = graphql`
         }
         groupsSubHeader
         groupsDescription
+      }
+    }
+    groups: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "group-page"}}}) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            groupLogo {
+              childImageSharp {
+                gatsbyImageData(quality: 100, width: 320, layout: CONSTRAINED)
+              }
+            }
+          }
+        }
       }
     }
   }
