@@ -33,7 +33,7 @@ const Blog = ({ data, posts }) => {
                   </a>
                 </div>
                 <div className="mt-6 flex items-center">
-                  <div>
+                  <div className="ml-3">
                     <div className="flex space-x-1 text-sm text-gray-500">
                       <time dateTime={post.node.frontmatter.date}>{post.node.frontmatter.date}</time>
                     </div>
