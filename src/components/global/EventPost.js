@@ -40,7 +40,7 @@ const EventPost = ({
           </div>
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
             {/* Testimonial card*/}
-            <div className="relative px-2 py-4 rounded-2xl shadow-xl overflow-hidden bg-rtSecondary">
+            <div className="relative px-10 py-8 rounded-2xl shadow-xl overflow-hidden bg-gray-100">
               <GatsbyImage
                 className="inset-0 h-full w-full object-cover"
                 image={logo}

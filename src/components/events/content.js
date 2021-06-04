@@ -26,7 +26,7 @@ const Content = ({ data, events }) => {
           <div className="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
             {events.map(event => (
               <Link key={event.node.frontmatter.title} to={event.node.fields.slug}>
-                <div className="col-span-1 flex flex-col justify-center items-center py-8 px-8 bg-gray-50">
+                <div className="col-span-1 flex flex-col justify-center items-center py-8 px-8 bg-gray-100">
                   <h3 className="text-lg font-medium text-gray-900 tracking-tight hover:text-rtSecondary">{event.node.frontmatter.title}</h3>
                   <GatsbyImage
                     className="max-h-48"
