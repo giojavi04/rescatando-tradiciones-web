@@ -73,9 +73,8 @@ homeTestimonial:
   charge: Sub Coordinador RT.
 homePosts:
   title: Últimos posts
-  description: Phasellus lorem quam molestie id quisque diam aenean nulla in.
-    Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id
-    viverra nulla.
+  description: Mantente actualizado de nuestro trabajo a traves de nuestro blog de
+    información.
 homeCta:
   title: Recibe notificaciones cuando hagamos eventos.
   description: Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum

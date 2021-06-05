@@ -8,6 +8,6 @@ blogDescription: >-
               Nuestro Contenido
             </h2>
             <p className="mt-5 mx-auto max-w-prose text-xl text-gray-500">
-              Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.
+              Mantente actualizado de nuestro trabajo a traves de nuestro blog de información.
             </p>
 ---

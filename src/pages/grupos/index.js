@@ -43,7 +43,7 @@ export const pageQuery = graphql`
             title
             groupLogo {
               childImageSharp {
-                gatsbyImageData(quality: 100, width: 320, layout: CONSTRAINED)
+                gatsbyImageData(quality: 100, width: 240, layout: CONSTRAINED)
               }
             }
           }
