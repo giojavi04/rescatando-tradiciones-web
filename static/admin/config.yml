@@ -53,6 +53,7 @@ collections:
         options:
           - { label: "Banda", value: "BANDA" }
           - { label: "Bastoneras", value: "BASTONERAS" }
+          - { label: "Banda y Bastoneras", value: "BANDA Y BASTONERAS" }
           - { label: "Danza", value: "DANZA" }
           - { label: "Varios", value: "VARIOS" }
       - { label: "Activado", name: "groupActive", widget: "boolean" }
@@ -62,8 +63,18 @@ collections:
       - { label: Descripción, name: groupDescription, widget: text }
       - { label: "Logo de agrupación", name: groupLogo, widget: image }
       - { label: Body, name: body, widget: markdown }
-      - { label: "Facebook url", name: groupLinkFacebook, widget: string, required: false }
-      - { label: "Instagram url", name: groupLinkInstagram, widget: string, required: false }
+      - {
+          label: "Facebook url",
+          name: groupLinkFacebook,
+          widget: string,
+          required: false,
+        }
+      - {
+          label: "Instagram url",
+          name: groupLinkInstagram,
+          widget: string,
+          required: false,
+        }
       - { label: "Email", name: groupEmail, widget: string, required: false }
       - { label: "Teléfono", name: groupPhone, widget: string, required: false }
 

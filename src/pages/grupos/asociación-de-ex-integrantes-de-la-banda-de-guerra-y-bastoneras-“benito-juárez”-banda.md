@@ -1,10 +1,9 @@
 ---
 templateKey: group-page
-groupType: BANDA
+groupType: BANDA Y BASTONERAS
 groupActive: true
 groupImageHeader: /img/aeibgbbj-banda-post.jpg
-title: Asociación de Ex Integrantes de la Banda de Guerra y Bastoneras “Benito
-  Juárez” - Banda
+title: Asociación de Ex Integrantes de la Banda de Guerra y Bastoneras “Benito Juárez”
 groupMotto: El respeto al derecho ajeno es la paz
 groupDescription: La Asociación de Ex Integrantes de la Banda de Guerra y
   Bastoneras “Benito Juárez” – Quito, es una agrupación que se fundó el 31 de

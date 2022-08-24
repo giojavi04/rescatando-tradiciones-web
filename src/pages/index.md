@@ -39,36 +39,21 @@ homeIntro:
 
     <div className="mt-6 text-gray-500 space-y-6">
                   <p className="text-lg">
-                    Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque
-                    tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus
-                    morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.
+                    Rescatando Tradiciones es un colectivo sin ánimo de lucro nacido en el año 2015 con el propósito de recuperar, mantener y crear eventos en los que se pueda seguir realizando la actividad de las Bandas de Guerra y Bastoneras que son y han sido tradición e historia en Quito y el país desde el año 1941.
                       </p>
                   <p className="text-base leading-7">
-                    Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget
-                    pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna. Sollicitudin
-                    tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget pretium arcu
-                    vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna.
-                      </p>
-                  <p className="text-base leading-7">
-                    Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet
-                    velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus
-                    egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra.
+                    Nos mantenemos bajo la tónica de bandas de guerra, ya que somos egresados, en nuestro tiempo de estudiantes las agrupaciones llevaban ese nombre. Por otra parte, consideramos que la denominación no influye, sino la actitud para llevar a cabo las acciones.
                       </p>
                 </div>
-  phrase: Tincidunt integer commodo, cursus etiam aliquam neque, et. Consectetur
-    pretium in volutpat, diam. Montes, magna cursus nulla feugiat dignissim id
-    lobortis amet.
+  phrase: A un grupo de amigos nadie los vence!
   author: Javier Villamarín, Coordinador General.
 homeEvents:
   title: Nuestros eventos
-  description: Phasellus lorem quam molestie id quisque diam aenean nulla in.
-    Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id
-    viverra nulla.
+  description: Para nosotros es un gusto poder brindar a la ciudadanía nuestro
+    trabajo para que disfruten y se diviertan.
 homeTestimonial:
   image: /img/home-pablo-villamarin.png
-  phrase: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla
-    vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc
-    urna, sits.
+  phrase: Un pueblo sin cultura, es un pueblo muerto.
   author: Pablo Villamarín
   charge: Sub Coordinador RT.
 homePosts:
@@ -77,6 +62,6 @@ homePosts:
     información.
 homeCta:
   title: Recibe notificaciones cuando hagamos eventos.
-  description: Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum
-    urna sed consectetur neque tristique pellentesque.
+  description: ¿Deseas conocer más acerca de nuestro colectivo?. Ingresa tu email,
+    y nos comunicaremos contigo.
 ---
