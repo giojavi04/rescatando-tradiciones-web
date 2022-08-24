@@ -1,18 +1,20 @@
-import * as React from "react"
-import { Link } from 'gatsby'
+import * as React from "react";
+import { Link } from "gatsby";
+
+import logoJavierMontalvo from "../../images/logo-javier-montalvo.svg";
 
 const footerNavigation = {
   main: [
-    { name: 'Nosotros', to: '/nosotros' },
-    { name: 'Grupos', to: '/grupos' },
-    { name: 'Eventos', to: '/eventos' },
-    { name: 'Blog', to: '/blog' },
-    { name: 'Contacto', to: '/contacto' },
+    { name: "Nosotros", to: "/nosotros" },
+    { name: "Grupos", to: "/grupos" },
+    { name: "Eventos", to: "/eventos" },
+    { name: "Blog", to: "/blog" },
+    { name: "Contacto", to: "/contacto" },
   ],
   social: [
     {
-      name: 'Facebook',
-      to: 'https://www.facebook.com/RescatandoT',
+      name: "Facebook",
+      to: "https://www.facebook.com/RescatandoT",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -24,8 +26,8 @@ const footerNavigation = {
       ),
     },
     {
-      name: 'Instagram',
-      to: 'https://www.instagram.com/rescatando_tradiciones_oficial',
+      name: "Instagram",
+      to: "https://www.instagram.com/rescatando_tradiciones_oficial",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -37,16 +39,22 @@ const footerNavigation = {
       ),
     },
   ],
-}
+};
 // markup
 const Footer = () => {
   return (
     <footer className="mt-24 bg-gray-900 sm:mt-12">
-      <div className="mx-auto max-w-md py-12 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-        <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+      <div className="mx-auto max-w-md pt-12 pb-6 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <nav
+          className="-mx-5 -my-2 flex flex-wrap justify-center"
+          aria-label="Footer"
+        >
           {footerNavigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <Link to={item.to} className="text-base text-gray-400 hover:text-gray-300">
+              <Link
+                to={item.to}
+                className="text-base text-gray-400 hover:text-gray-300"
+              >
                 {item.name}
               </Link>
             </div>
@@ -54,16 +62,35 @@ const Footer = () => {
         </nav>
         <div className="mt-8 flex justify-center space-x-6">
           {footerNavigation.social.map((item) => (
-            <a key={item.name} href={item.to} target="__blank" className="text-gray-400 hover:text-gray-300">
+            <a
+              key={item.name}
+              href={item.to}
+              target="__blank"
+              className="text-gray-400 hover:text-gray-300"
+            >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-8 text-center text-base text-gray-400">&copy; 2021 Rescatando Tradiciones, Todos los derechos reservados. Desarrollado por: <a href="https://twitter.com/giojavi04" className="text-base text-gray-400 hover:text-gray-300">Javier Montalvo.</a></p>
+        <p className="mt-8 text-center text-base text-gray-400">
+          &copy; {new Date().getFullYear()} Rescatando Tradiciones, Todos los
+          derechos reservados. Desarrollado por:{" "}
+          <a
+            href="https://www.linkedin.com/in/giojavi04/"
+            className="text-base text-gray-400 hover:text-gray-300"
+            target={`_blank`}
+          >
+            <img
+              className="h-6 w-auto sm:h-7 ml-2 text-gray-400 inline-block"
+              src={logoJavierMontalvo}
+              alt="Rescatando Tradiciones"
+            />
+          </a>
+        </p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
