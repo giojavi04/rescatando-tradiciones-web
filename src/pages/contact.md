@@ -8,24 +8,19 @@ contactDescription: >-
                 Contacto por correo electrónico
                 </h1>
               <p className="mt-6 text-xl text-warm-gray-500 max-w-3xl">
-                Vel nunc non ut montes, viverra tempor. Proin lectus nibh phasellus morbi non morbi. In elementum urna
-                ut volutpat. Sagittis et vel et fermentum amet consequat.
+                Si deseas obtener información más detalladam puedes llenar este formulario y nos pondremos en contacto contigo.
                 </p>
 contactContentForm: >-
   <h3 className="text-lg font-medium text-white">Información de contacto</h3>
                   <p className="mt-6 text-base text-white max-w-3xl">
-                    Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor
-                    lacus arcu.
+                   El siguiente formulario nos ayudará a mejorar nuestros proyectos venideros, con tus comentarios.
                     </p>
-contactPhone: +593 123-4567
+contactPhone: +593 988512720
 contactMail: info@rescatandotradiciones.org
 contactAdditionalInfo:
   title: Información adicional
-  description: Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate
-    id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.
+  description: Direcciones donde puedes encontrarnos.
   item:
     - name: Quito
-      description: 4556 Brendan Ferry Los Angeles, CA 90210
-    - name: Guayaquil
-      description: Guayaquil
+      description: Av. Pérez Guerrero.
 ---

@@ -5,51 +5,37 @@ aboutSubHeader: Somos la escencia de la tradición.
 aboutDescription: >-
   <div className="text-base max-w-prose mx-auto lg:max-w-none">
                 <p className="text-lg text-gray-500">
-                  Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
-                  pellentesque. Blandit amet, sed aenean erat arcu morbi.
+                  Rescatando Tradiciones es un colectivo sin ánimo de lucro nacido en el año 2015 con el propósito de recuperar, mantener y crear eventos en los que se pueda seguir realizando la actividad de las Bandas de Guerra y Bastoneras que son y han sido tradición e historia en Quito y el país desde el año 1941.
                 </p>
               </div>
               <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
                 <p>
-                  Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget
-                  pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna.
+                  Nos mantenemos bajo la tónica de bandas de guerra, ya que somos egresados, en nuestro tiempo de estudiantes las agrupaciones llevaban ese nombre. Por otra parte, consideramos que la denominación no influye, sino la actitud para llevar a cabo las acciones.
                 </p>
                 <p>
-                  Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique sit nisi lorem pulvinar. Urna, laoreet
-                  fusce nibh leo. Dictum et et et sit. Faucibus sed non gravida lectus dignissim imperdiet a.
+                  Realizamos eventos en fechas importantes para la ciudadanía con el afán de mantener y recuperar los valores patrios que se han ido perdiendo poco a poco, así también la alegría y diversión en los desfiles de fiestas de Quito.
                 </p>
                 <p>
-                  Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem arcu, metus, egestas netus cursus. In.
-                </p>
-                <ul>
-                  <li>Quis elit egestas venenatis mattis dignissim.</li>
-                  <li>Cras cras lobortis vitae vivamus ultricies facilisis tempus.</li>
-                  <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
-                </ul>
-                <p>
-                  Rhoncus nisl, libero egestas diam fermentum dui. At quis tincidunt vel ultricies. Vulputate aliquet
-                  velit faucibus semper. Pellentesque in venenatis vestibulum consectetur nibh id. In id ut tempus
-                  egestas. Enim sit aliquam nec, a. Morbi enim fermentum lacus in. Viverra.
-                </p>
-                <h3>How we helped</h3>
-                <p>
-                  Tincidunt integer commodo, cursus etiam aliquam neque, et. Consectetur pretium in volutpat, diam.
-                  Montes, magna cursus nulla feugiat dignissim id lobortis amet. Laoreet sem est phasellus eu proin massa,
-                  lectus. Diam rutrum posuere donec ultricies non morbi. Mi a platea auctor mi.
+                  Los pilares de este colectivo son: la confraternidad, amistad, respeto, buena voluntad, trabajo en equipo, organización y sobre todo LEALTAD.
+
+  Para conseguir los objetivos contamos con el apoyo de 30 asociaciones y agrupaciones de egresados con los cuales mantenemos la tradición.
                 </p>
                 <p>
-                  Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
-                  pellentesque. Blandit amet, sed aenean erat arcu morbi.
+                  Es así que nuestros lemas son: “Somos la Esencia de la Tradición” y “A un grupo de amigos nadie los vence".
+                </p>
+                <p>
+                  Con el crecimiento de los eventos hoy por hoy contamos con el trabajo en escena de danzas nacionales, latinoamericanas, bolivianas, colectivos sociales y culturales para dar una mayor diversidad a cada evento; todo con autogestión.
+                </p>
+                <p>
+                  Para nosotros es un gusto poder brindar a la ciudadanía nuestro trabajo para que disfruten y se diviertan.
                 </p>
               </div>
 aboutImageContent: /img/about-content.png
 aboutImageDescription: Fotografía plaza de la independencia, Quito - Ecuador.
 aboutTeam:
   title: Nuestro Equipo
-  description: >+
-    Ornare sagittis, suspendisse in hendrerit quis. Sed dui aliquet lectus sit
-    pretium egestas vel mattis neque.
-
+  description: Te mostramos los coordinadores que fueron parte de la construcción
+    de este gran colectivo.
   team:
     - name: Javier Villamarín
       role: Coordinador General
