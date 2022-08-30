@@ -22,5 +22,5 @@ contactAdditionalInfo:
   description: Direcciones donde puedes encontrarnos.
   item:
     - name: Quito
-      description: Av. Pérez Guerrero.
+      description: rescatandotradicionesuio@gmail.com
 ---
