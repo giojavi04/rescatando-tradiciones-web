@@ -12,7 +12,7 @@ groupDescription: La Asociación de Ex Integrantes de la Banda de Guerra y
   de Cultura y Patrimonio; con el cual dieron formalidad al compromiso como
   egresados para trabajar por el legado de su querida institución; colegio
   emblemático del sur de la capital con más de 50 años de historia.
-groupLogo: /img/aeibgbbj-banda-logo.png
+groupLogo: /img/logo-aeibgbbj-transparente.png
 groupLinkFacebook: https://www.facebook.com/AsoExIntegrantesBenitoJuarez
 groupLinkInstagram: https://www.instagram.com/exintegrantesbenitojuarez/
 groupEmail: exintegrantesbj@gmail.com

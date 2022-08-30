@@ -1,9 +1,7 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import * as React from "react";
+import { Link } from "gatsby";
 
-import {
-  UserGroupIcon,
-} from '@heroicons/react/outline'
+import { UserGroupIcon } from "@heroicons/react/outline";
 
 //markup
 const Events = ({ data, events }) => {
@@ -24,13 +22,20 @@ const Events = ({ data, events }) => {
                   <div className="-mt-6">
                     <div>
                       <span className="inline-flex items-center justify-center p-3 bg-rtSecondary rounded-md shadow-lg">
-                        <UserGroupIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                        <UserGroupIcon
+                          className="h-6 w-6 text-white"
+                          aria-hidden="true"
+                        />
                       </span>
                     </div>
                     <Link to={event.node.fields.slug}>
-                      <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight hover:text-rtSecondary">{event.node.frontmatter.title}</h3>
+                      <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight hover:text-rtSecondary">
+                        {event.node.frontmatter.title}
+                      </h3>
                     </Link>
-                    {/* <p className="mt-5 text-base text-gray-500">{event.node.frontmatter.eventDescription}</p> */}
+                    <p className="mt-5 text-base text-gray-500">
+                      {event.node.frontmatter.eventResume}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -39,7 +44,7 @@ const Events = ({ data, events }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Events
+export default Events;
