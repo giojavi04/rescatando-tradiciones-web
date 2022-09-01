@@ -44,6 +44,7 @@ export const pageQuery = graphql`
           eventActive: { eq: true }
         }
       }
+      sort: { fields: [frontmatter___title], order: ASC }
     ) {
       edges {
         node {
