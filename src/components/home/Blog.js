@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import * as React from "react";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 //markup
 const Blog = ({ data, posts }) => {
@@ -16,9 +16,19 @@ const Blog = ({ data, posts }) => {
         </div>
         <div className="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
           {posts.map((post) => (
-            <div key={post.node.id} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div
+              key={post.node.id}
+              className="flex flex-col items-stretch rounded-lg shadow-lg overflow-hidden"
+            >
               <div className="flex-shrink-0">
-                <GatsbyImage className="h-48 w-full object-cover" image={post.node.frontmatter.featuredimage.childImageSharp.gatsbyImageData} alt={post.node.frontmatter.title} />
+                <GatsbyImage
+                  className="h-48 w-full object-cover"
+                  image={
+                    post.node.frontmatter.featuredimage.childImageSharp
+                      .gatsbyImageData
+                  }
+                  alt={post.node.frontmatter.title}
+                />
               </div>
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div className="flex-1">
@@ -28,14 +38,20 @@ const Blog = ({ data, posts }) => {
                     </a>
                   </p> */}
                   <a href={post.node.fields.slug} className="block mt-2">
-                    <p className="text-xl font-semibold text-gray-900">{post.node.frontmatter.title}</p>
-                    <p className="mt-3 text-base text-gray-500">{post.node.excerpt}</p>
+                    <p className="text-xl font-semibold text-gray-900">
+                      {post.node.frontmatter.title}
+                    </p>
+                    <p className="mt-3 text-base text-gray-500">
+                      {post.node.excerpt}
+                    </p>
                   </a>
                 </div>
                 <div className="mt-6 flex items-center">
                   <div className="ml-3">
                     <div className="flex space-x-1 text-sm text-gray-500">
-                      <time dateTime={post.node.frontmatter.date}>{post.node.frontmatter.date}</time>
+                      <time dateTime={post.node.frontmatter.date}>
+                        {post.node.frontmatter.date}
+                      </time>
                     </div>
                   </div>
                 </div>
@@ -45,7 +61,7 @@ const Blog = ({ data, posts }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
