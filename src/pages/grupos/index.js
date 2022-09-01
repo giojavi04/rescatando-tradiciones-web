@@ -1,27 +1,31 @@
-import * as React from "react"
-import { graphql } from 'gatsby'
+import * as React from "react";
+import { graphql } from "gatsby";
 
-import Seo from '../../components/global/Seo'
-import HeaderPage from '../../components/global/HeaderPage'
-import Content from '../../components/groups/content'
+import Seo from "../../components/global/Seo";
+import HeaderPage from "../../components/global/HeaderPage";
+import Content from "../../components/groups/content";
 
 // markup
 const GroupsPage = ({ data }) => {
-  const { frontmatter } = data.static
-  const groups = data.groups.edges
+  const { frontmatter } = data.static;
+  const groups = data.groups.edges;
 
   return (
     <>
       <Seo title={frontmatter.groupsTitle} />
-      <HeaderPage image={frontmatter.groupsImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.groupsTitle} description={frontmatter.groupsSubHeader} />
+      <HeaderPage
+        image={frontmatter.groupsImageHeader.childImageSharp.gatsbyImageData}
+        title={frontmatter.groupsTitle}
+        description={frontmatter.groupsSubHeader}
+      />
       <Content data={frontmatter.groupsDescription} groups={groups} />
     </>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query {
-    static: markdownRemark(frontmatter: {groupsTitle: {eq: "Grupos"}}) {
+    static: markdownRemark(frontmatter: { groupsTitle: { eq: "Grupos" } }) {
       frontmatter {
         groupsTitle
         groupsImageHeader {
@@ -33,7 +37,14 @@ export const pageQuery = graphql`
         groupsDescription
       }
     }
-    groups: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "group-page"}}}) {
+    groups: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "group-page" }
+          groupActive: { eq: true }
+        }
+      }
+    ) {
       edges {
         node {
           fields {
@@ -51,6 +62,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default GroupsPage
+export default GroupsPage;

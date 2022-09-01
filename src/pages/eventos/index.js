@@ -1,27 +1,31 @@
-import * as React from "react"
-import { graphql } from 'gatsby'
+import * as React from "react";
+import { graphql } from "gatsby";
 
-import Seo from '../../components/global/Seo'
-import HeaderPage from '../../components/global/HeaderPage'
-import Content from '../../components/events/content'
+import Seo from "../../components/global/Seo";
+import HeaderPage from "../../components/global/HeaderPage";
+import Content from "../../components/events/content";
 
 // markup
 const EventsPage = ({ data }) => {
-  const { frontmatter } = data.static
-  const events = data.events.edges
+  const { frontmatter } = data.static;
+  const events = data.events.edges;
 
   return (
     <>
       <Seo title={frontmatter.eventsTitle} />
-      <HeaderPage image={frontmatter.eventsImageHeader.childImageSharp.gatsbyImageData} title={frontmatter.eventsTitle} description={frontmatter.eventsSubHeader} />
+      <HeaderPage
+        image={frontmatter.eventsImageHeader.childImageSharp.gatsbyImageData}
+        title={frontmatter.eventsTitle}
+        description={frontmatter.eventsSubHeader}
+      />
       <Content data={frontmatter.eventsDescription} events={events} />
     </>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query {
-    static: markdownRemark(frontmatter: {eventsTitle: {eq: "Eventos"}}) {
+    static: markdownRemark(frontmatter: { eventsTitle: { eq: "Eventos" } }) {
       frontmatter {
         eventsTitle
         eventsImageHeader {
@@ -33,7 +37,14 @@ export const pageQuery = graphql`
         eventsDescription
       }
     }
-    events: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "event-page"}}}) {
+    events: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "event-page" }
+          eventActive: { eq: true }
+        }
+      }
+    ) {
       edges {
         node {
           fields {
@@ -51,6 +62,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default EventsPage
+export default EventsPage;
