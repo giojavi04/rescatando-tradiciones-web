@@ -1,7 +1,7 @@
 ---
 templateKey: group-page
 groupType: BASTONERAS
-groupActive: true
+groupActive: false
 groupImageHeader: /img/bastoneras-egresadas-juan-motalvo-post.jpg
 title: Bastoneras Egresadas “Juan Montalvo”
 groupMotto: "En nuestro corazón, están impregnados nuestros colores, siempre
