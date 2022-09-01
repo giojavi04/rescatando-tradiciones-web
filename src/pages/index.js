@@ -79,7 +79,12 @@ export const pageQuery = graphql`
       }
     }
     groups: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "group-page" } } }
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "group-page" }
+          groupActive: { eq: true }
+        }
+      }
     ) {
       edges {
         node {
@@ -90,7 +95,12 @@ export const pageQuery = graphql`
       }
     }
     events: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "event-page" } } }
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "event-page" }
+          eventActive: { eq: true }
+        }
+      }
     ) {
       edges {
         node {
