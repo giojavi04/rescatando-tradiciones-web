@@ -1,20 +1,20 @@
-import * as React from 'react'
-import PropTypes from 'prop-types'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import * as React from "react";
+import PropTypes from "prop-types";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-import ContentHTML from '../global/ContentHTML'
-import ReturnPrevButton from '../global/ReturnPrevButton'
+import ContentHTML from "../global/ContentHTML";
+import Share from "./Share";
+import ReturnPrevButton from "../global/ReturnPrevButton";
 
-const EventPost = ({
-  content,
-  logo,
-  title,
-}) => {
+const EventPost = ({ content, logo, title }) => {
   return (
     <div className="relative mt-16">
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
         <div className="relative sm:py-16 lg:py-0">
-          <div aria-hidden="true" className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
+          <div
+            aria-hidden="true"
+            className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen"
+          >
             <div className="absolute inset-y-0 right-1/2 w-full bg-gray-50 rounded-r-3xl lg:right-72" />
             <svg
               className="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12"
@@ -32,10 +32,21 @@ const EventPost = ({
                   height={20}
                   patternUnits="userSpaceOnUse"
                 >
-                  <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+                  <rect
+                    x={0}
+                    y={0}
+                    width={4}
+                    height={4}
+                    className="text-gray-200"
+                    fill="currentColor"
+                  />
                 </pattern>
               </defs>
-              <rect width={404} height={392} fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)" />
+              <rect
+                width={404}
+                height={392}
+                fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)"
+              />
             </svg>
           </div>
           <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
@@ -57,18 +68,19 @@ const EventPost = ({
               {title}
             </h2>
             <ContentHTML content={content} />
+            <Share />
             <ReturnPrevButton />
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 EventPost.propTypes = {
   content: PropTypes.node.isRequired,
   logo: PropTypes.object,
   title: PropTypes.string,
-}
+};
 
-export default EventPost
+export default EventPost;

@@ -43,6 +43,10 @@ function Seo({ description, lang, meta, title, image }) {
           content: metaDescription,
         },
         {
+          property: `og:url`,
+          content: location.href,
+        },
+        {
           property: `og:type`,
           content: `website`,
         },
