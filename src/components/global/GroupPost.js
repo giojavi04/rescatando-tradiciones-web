@@ -96,7 +96,7 @@ const GroupPost = ({
                 fill="url(#bedc54bc-7371-44a2-a2bc-dc68d819ae60)"
               />
             </svg>
-            <blockquote className="relative bg-gray-200 rounded-lg shadow-lg w-96 min-w-full">
+            <blockquote className="relative bg-gray-200 rounded-lg shadow-lg w-full">
               <div className="rounded-t-lg px-6 py-4">
                 <div className="relative">
                   <GatsbyImage image={logo} alt={title} />
