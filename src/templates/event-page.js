@@ -14,6 +14,10 @@ const EventTemplate = ({ data }) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.eventResume}
+        image={
+          post.frontmatter.eventLogoEvent.childImageSharp.gatsbyImageData.images
+            .fallback.src
+        }
       />
       <HeaderPage
         image={

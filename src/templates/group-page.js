@@ -14,6 +14,10 @@ const GroupTemplate = ({ data }) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.groupDescription}
+        image={
+          post.frontmatter.groupLogo.childImageSharp.gatsbyImageData.images
+            .fallback.src
+        }
       />
       <HeaderPage
         image={
