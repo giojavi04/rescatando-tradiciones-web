@@ -1,6 +1,7 @@
 ---
 templateKey: group-page
-groupType: BASTONERAS
+groupTypes:
+  - BASTONERAS
 groupActive: true
 groupImageHeader: /img/bastoneras-egresadas-la-providencia-post.jpg
 title: Asociación de Bastoneras Egresadas “La Providencia”
@@ -18,6 +19,7 @@ groupLinkFacebook: https://www.facebook.com/AsoBastonerasEgresadasProvidencia
 groupLinkInstagram: https://instagram.com/asobastoegresadas_providencia
 groupEmail: bastonerasegresadasprovidencia@gmail.com
 groupPhone: "0997807686"
+groupType: BASTONERAS
 ---
 *Una nueva agrupación, pero la misma pasión y talento*
 

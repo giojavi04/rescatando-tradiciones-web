@@ -1,5 +1,4 @@
 ---
-eventActive: true
 templateKey: event-page
 eventImageHeader: /img/about-header.png
 title: Corso Carnaval Quiteño
@@ -7,6 +6,7 @@ eventSubHeader: By Rescatando Tradiciones
 eventLogoEvent: /img/evento-logo-corso-carnaval-quiteno.png
 eventResume: Es una iniciativa ciudadana nacida hace varios años por parte de la
   asamblea del centro histórico.
+eventActive: true
 templatePath: events
 ---
 

@@ -1,10 +1,11 @@
 ---
 templateKey: group-page
-groupType: BASTONERAS
+groupTypes:
+  - BASTONERAS
 groupActive: true
 groupImageHeader: /img/bastoneras-egresadas-fernandez-madrid-post.jpg
-title: Grupo de Bastoneras de Egresadas y Ex Integrantes Liceo Fernandez Madird
-groupMotto: Más que un grupo,Una familia
+title: Grupo de Bastoneras de Egresadas y Ex Integrantes Liceo Fernandez Madrid
+groupMotto: Más que un grupo, una familia.
 groupDescription: >
   El Grupo de Bastoneras Egresadas Liceo Fernández Madrid fue creado en el año
   2014 bajo la dirección del Lic Fernando Morejón en Quito-Ecuador.
@@ -14,6 +15,7 @@ groupLinkFacebook: Facebook
 groupLinkInstagram: https://instagram.com/banda_bastoneras_egresados_lfm
 groupEmail: bastonerasegresadaslfm@gmail.com
 groupPhone: "0984180138"
+groupType: BASTONERAS
 ---
 El Grupo de Bastoneras Egresadas Liceo Fernández Madrid fue creado en el año 2014 bajo la dirección del Lic Fernando Morejón en Quito-Ecuador.
 

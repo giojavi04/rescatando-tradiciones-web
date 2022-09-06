@@ -1,6 +1,7 @@
 ---
 templateKey: group-page
-groupType: BASTONERAS
+groupTypes:
+  - BASTONERAS
 groupActive: true
 groupImageHeader: /img/bastoneras-consejo-provincial-post.jpg
 title: "Bastoneras Egresadas Consejo Provincial de Pichincha "
@@ -25,6 +26,7 @@ groupLinkFacebook: https://www.facebook.com/BastonerasEgresadasConsejoProvincial
 groupLinkInstagram: https://instagram.com/bastoneras_egresadas_cpp
 groupEmail: " xtinabelendmn@hotmail.com"
 groupPhone: "0995443337"
+groupType: BASTONERAS
 ---
 El grupo selecto de señoras y señoritas bastoneras egresadas de la unidad educativa “Consejo Provincial de Pichincha” se dedica a mantener ferviente la pasión que nos motivaba desde aquellos años de colegio, donde nuestro mayor objetivo era representar a nuestra noble institución en cada festival o evento, ahora como egresadas el principal objetivo que tratamos de perseguir es demostrar el amor a lo que hacemos y que se puede ver reflejado en cada presentación, que gracias a cada repaso, sacrificio, calentamiento, amonestación, regaño, etc. 
 

@@ -89,7 +89,7 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            groupType
+            groupTypes
           }
         }
       }

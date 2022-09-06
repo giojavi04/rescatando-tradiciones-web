@@ -13,6 +13,14 @@ locale: "es"
 publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
+search: true
+
+editor:
+  preview: false
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
 
 collections:
   - name: "blog"
@@ -30,7 +38,12 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - {
+          label: "Featured Post",
+          name: "featuredpost",
+          widget: "boolean",
+          required: false,
+        }
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
@@ -48,12 +61,13 @@ collections:
           default: "group-page",
         }
       - label: "Tipo"
-        name: "groupType"
+        name: "groupTypes"
         widget: "select"
+        multiple: true
         options:
           - { label: "Banda", value: "BANDA" }
           - { label: "Bastoneras", value: "BASTONERAS" }
-          - { label: "Banda y Bastoneras", value: "BANDA Y BASTONERAS" }
+          - { label: "Porristas", value: "PORRISTAS" }
           - { label: "Danza", value: "DANZA" }
           - { label: "Varios", value: "VARIOS" }
       - { label: "Activado", name: "groupActive", widget: "boolean" }

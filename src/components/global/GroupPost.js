@@ -4,6 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
 
 import ContentHTML from "./ContentHTML";
+import Share from "./Share";
 import ReturnPrevButton from "../global/ReturnPrevButton";
 
 const GroupPost = ({
@@ -11,7 +12,7 @@ const GroupPost = ({
   logo,
   title,
   description,
-  type,
+  types,
   facebook,
   instagram,
   email,
@@ -22,7 +23,7 @@ const GroupPost = ({
       <div className="max-w-7xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
         <div className="text-base max-w-prose mx-auto lg:max-w-none">
           <h2 className="text-base text-rtSecondary font-semibold tracking-wide uppercase">
-            {type}
+            {types && types.join(" - ")}
           </h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             {title}
@@ -37,7 +38,7 @@ const GroupPost = ({
               <ContentHTML content={content} />
             </div>
             <div className="mt-4 flex text-base max-w-prose mx-auto lg:max-w-none">
-              <dl className="space-y-6 lg:gap-8 ">
+              <dl className="space-y-3 lg:gap-8">
                 <dt>
                   <span className="sr-only">Número</span>
                 </dt>
@@ -60,6 +61,7 @@ const GroupPost = ({
                 </dd>
               </dl>
             </div>
+            <Share />
             <ReturnPrevButton />
           </div>
           <div className="mt-12 relative text-base max-w-prose mx-auto lg:mt-0 lg:max-w-none">

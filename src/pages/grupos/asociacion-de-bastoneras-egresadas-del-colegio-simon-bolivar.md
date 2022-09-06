@@ -1,6 +1,7 @@
 ---
 templateKey: group-page
-groupType: BASTONERAS
+groupTypes:
+  - BASTONERAS
 groupActive: true
 groupImageHeader: /img/abecsb-post.png
 title: Asociación de Bastoneras Egresadas del Colegio Simón Bolívar
@@ -21,6 +22,8 @@ groupLinkFacebook: https://www.facebook.com/AsoBastonerasEgresadasCSBOficial
 groupLinkInstagram: https://www.instagram.com/asobastoneras_egresadas_csb
 groupEmail: directivaabecsb@gmail.com
 groupPhone: 0958614122 / 0998023426
+groupType:
+  - BASTONERAS
 ---
 La Asociación de Bastoneras Egresadas del Colegio Simón Bolívar de la ciudad de Quito, inicia sus actividades con la primera convocatoria de bastoneras egresadas del Colegio Simón Bolívar, en las instalaciones del antiguo establecimiento educativo ubicado en el Centro Histórico de Quito, en las calles Benalcázar y Olmedo, en el año 2008 por iniciativa de un grupo de egresadas y estudiantes de esa generación.
 

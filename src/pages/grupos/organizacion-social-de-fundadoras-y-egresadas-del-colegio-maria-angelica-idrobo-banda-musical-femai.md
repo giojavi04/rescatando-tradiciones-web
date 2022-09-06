@@ -1,6 +1,7 @@
 ---
 templateKey: group-page
-groupType: BANDA
+groupTypes:
+  - BANDA
 groupActive: true
 groupImageHeader: /img/femai-post.jpg
 title: Organización Social de fundadoras y egresadas del Colegio María Angélica
@@ -16,6 +17,7 @@ groupLogo: /img/femai-logo.jpg
 groupLinkFacebook: https://www.facebook.com/BandaMusical.Femai2017
 groupEmail: egresadasbandamai@gmail.com
 groupPhone: "0961190727 "
+groupType: BANDA
 ---
 Con fecha, 17 de marzo de 2017, el Licenciado Estuardo Rivadeneira encabeza la reunión, realiza la presentación del proyecto y se acuerda la conformación de la Banda Musical de Fundadoras y Egresadas del Colegio María Angélica Idrobo.
 
