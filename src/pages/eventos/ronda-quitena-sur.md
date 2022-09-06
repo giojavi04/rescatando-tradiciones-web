@@ -1,5 +1,4 @@
 ---
-eventActive: true
 templateKey: event-page
 eventImageHeader: /img/about-header.png
 title: Ronda Quiteña Sur
@@ -7,6 +6,7 @@ eventSubHeader: By Rescatando Tradiciones
 eventLogoEvent: /img/evento-logo-ronda-quitena-sur.png
 eventResume: Desfile festivo por las fiestas de fundación de la ciudad de Quito,
   que rememora y recupera el desaparecido pregón del sur.
+eventActive: true
 templatePath: events
 ---
 

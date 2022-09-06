@@ -1,6 +1,7 @@
 ---
 templateKey: group-page
-groupType: BASTONERAS
+groupTypes:
+  - BASTONERAS
 groupActive: false
 groupImageHeader: /img/bastoneras-egresadas-juan-motalvo-post.jpg
 title: Bastoneras Egresadas “Juan Montalvo”
@@ -14,6 +15,7 @@ groupLinkFacebook: https://www.facebook.com/juan.montalvo.10441861/
 groupLinkInstagram: 	https://www.instagram.com/bastoneras_egresadas_montalvo
 groupEmail: basto.egre.jmontalvo@gmail.com
 groupPhone: "0979906481"
+groupType: BASTONERAS
 ---
 La agrupación de Bastoneras Egresadas “Juan Montalvo” se creó en el año 2012 por primera vez a cargo de la Señora Leonela Moreno, después de 5 años retomaron sus actividades a cargo de la Señorita Verónica Celi.
 

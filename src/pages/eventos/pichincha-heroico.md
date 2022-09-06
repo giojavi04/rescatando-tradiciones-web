@@ -1,5 +1,4 @@
 ---
-eventActive: true
 templateKey: event-page
 eventImageHeader: /img/about-header.png
 title: Pichincha Heróico
@@ -7,6 +6,7 @@ eventSubHeader: By Rescatando Tradiciones
 eventLogoEvent: /img/evento-logo-pichincha-heroico.png
 eventResume: Desfile cívico que tiene el fin de mantener, recuperar y fortalecer
   los valores patrios.
+eventActive: true
 templatePath: events
 ---
 

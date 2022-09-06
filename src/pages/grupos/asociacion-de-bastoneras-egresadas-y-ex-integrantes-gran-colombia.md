@@ -1,6 +1,7 @@
 ---
 templateKey: group-page
-groupType: BASTONERAS
+groupTypes:
+  - BASTONERAS
 groupActive: true
 groupImageHeader: /img/asobeg-post.jpg
 title: Asociación de Bastoneras Egresadas y Ex Integrantes Gran Colombia
@@ -20,6 +21,7 @@ groupLinkFacebook: https://www.facebook.com/asobegc
 groupLinkInstagram: https://www.instagram.com/asobegc.ec/
 groupEmail: asobegc.ec@gmail.com
 groupPhone: "0995925610"
+groupType: BASTONERAS
 ---
 Hace más de 30 años, las experiencias guardadas en el corazón de cada bastonera del Colegio Gran Colombia, en su paso por la agrupación estudiantil, los repasos, las presentaciones, los halagos, la disciplina y un sin número de destrezas adquiridas gracias a las enseñanzas de Instructores que tomaron la batuta para formar agrupaciones fuertes enmarcadas en valores y amor por lo que bien se hace, han dado pie a que se retome ese vínculo ahora como egresadas; es así como se formó El GRUPO DE BASTONERAS EGRESADAS GRAN COLOMBIA se fundó el 16 de Julio de 2017 con la primera reunión de ex bastoneras conformado por iniciativa de Mayra Chicaiza y Denise Arias ex bastoneras de la Institución promoción 2012, fomentando así que perdure la tradición de la creación del grupo de bastoneras con más de 30 años y amor por la Institución a la que representan, quienes contarían con el apoyo de la Lic. Gabriela Carrera Ex Instructora del plantel, que en el 2017 tomaría la Instrucción y Liderazgo de la agrupación de egresadas. Al inicio de sus funciones el grupo contaba con 10 señoritas promociones entre 2011 – 2015, que serían el pilar fundamental para trabajar por un fin en común y enaltecer el nombre de la misma.
 

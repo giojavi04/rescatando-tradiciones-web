@@ -1,6 +1,7 @@
 ---
 templateKey: group-page
-groupType: BASTONERAS
+groupTypes:
+  - BASTONERAS
 groupActive: true
 groupImageHeader: /img/bethlemitas-post.png
 title: Grupo de Bastoneras Egresadas Bethlemitas
@@ -14,6 +15,7 @@ groupLinkFacebook: https://www.facebook.com/Grupo-de-Bastoneras-Egresadas-Bethle
 groupLinkInstagram: https://instagram.com/bastonera_egresada_bethlemita?utm_medium=copy_link
 groupEmail: " bastonerasegresadasbethlemitas@gmail.com"
 groupPhone: "0983816702"
+groupType: BASTONERAS
 ---
 El grupo de **BASTONERAS EGRESADAS BETHLEMITAS** fue creado el 26 de septiembre del 2019, por iniciativa del Lcdo. Fernando Soria y 7 egresadas que en su momento formaron parte del grupo de bastoneras de la “Unidad Educativa Sagrado Corazón de Jesús” Hermanas Bethlemitas, con el apoyo de la Hermana Inés Fustillos, rectora de la institución en dicho periodo.
 

@@ -1,11 +1,11 @@
 ---
-eventActive: true
 templateKey: event-page
 eventImageHeader: /img/about-header.png
 title: Quito Luz de América
 eventSubHeader: By Rescatando Tradiciones
 eventLogoEvent: /img/evento-logo-quito-luz-de-america.png
 eventResume: Es el primer evento masivo con el que empezó este colectivo.
+eventActive: true
 templatePath: events
 ---
 

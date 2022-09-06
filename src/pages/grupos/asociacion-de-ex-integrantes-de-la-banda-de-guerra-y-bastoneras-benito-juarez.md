@@ -1,10 +1,12 @@
 ---
 templateKey: group-page
-groupType: BANDA Y BASTONERAS
+groupTypes:
+  - BANDA
+  - BASTONERAS
 groupActive: true
 groupImageHeader: /img/aeibgbbj-banda-post.jpg
 title: Asociación de Ex Integrantes de la Banda de Guerra y Bastoneras “Benito Juárez”
-groupMotto: El respeto al derecho ajeno es la paz
+groupMotto: El respeto al derecho ajeno es la paz - Benito Juárez
 groupDescription: La Asociación de Ex Integrantes de la Banda de Guerra y
   Bastoneras “Benito Juárez” – Quito, es una agrupación que se fundó el 31 de
   Octubre del 2015, y el 18 de Noviembre del 2019 obtuvo la personería jurídica
@@ -17,6 +19,9 @@ groupLinkFacebook: https://www.facebook.com/AsoExIntegrantesBenitoJuarez
 groupLinkInstagram: https://www.instagram.com/exintegrantesbenitojuarez/
 groupEmail: exintegrantesbj@gmail.com
 groupPhone: "0987308851"
+groupType:
+  - BANDA
+  - BASTONERAS
 ---
 La Asociación de Ex Integrantes de la Banda de Guerra y Bastoneras “Benito Juárez” – Quito, es una agrupación que se fundó el 31 de Octubre del 2015, y el 18 de Noviembre del 2019 obtuvo la personería jurídica a través del Acuerdo Ministerial Nro. DM-2019-229, suscrito por el Ministerio de Cultura y Patrimonio; con el cual dieron formalidad al compromiso como egresados para trabajar por el legado de su querida institución; colegio emblemático del sur de la capital con más de 50 años de historia.
 
