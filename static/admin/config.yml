@@ -1,6 +1,4 @@
 backend:
-  site_url: https://rescatandotradiciones.org
-  display_url: https://rescatandotradiciones.org
   name: git-gateway
   branch: master
   commit_messages:
@@ -10,6 +8,8 @@ backend:
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
+site_url: https://rescatandotradiciones.org
+display_url: https://rescatandotradiciones.org
 local_backend: false
 locale: "es"
 publish_mode: editorial_workflow
