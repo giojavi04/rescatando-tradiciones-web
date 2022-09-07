@@ -56,11 +56,11 @@ function Seo({ description, lang, meta, title, image }) {
         },
         {
           name: `og:image:width`,
-          content: `300`,
+          content: `600`,
         },
         {
           name: `og:image:height`,
-          content: `300`,
+          content: `315`,
         },
         {
           name: `twitter:card`,
