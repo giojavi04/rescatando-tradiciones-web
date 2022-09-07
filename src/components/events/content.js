@@ -30,7 +30,7 @@ const Content = ({ data, events }) => {
                 to={event.node.fields.slug}
               >
                 <div className="col-span-1 flex flex-col justify-center items-stretch h-60 min-h-fit py-8 px-8 bg-gray-100">
-                  <h3 className="text-lg font-medium text-gray-900 tracking-tight hover:text-rtSecondary">
+                  <h3 className="text-lg font-medium text-gray-900 tracking-tight hover:text-rtSecondary leading-5">
                     {event.node.frontmatter.title}
                   </h3>
                   <GatsbyImage

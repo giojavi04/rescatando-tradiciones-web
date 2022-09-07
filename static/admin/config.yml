@@ -1,8 +1,5 @@
 backend:
-  site_url: https://rescatandotradiciones.org
-  display_url: https://rescatandotradiciones.org
-  auth_endpoint: https://rescatandotradiciones.org
-  name: git-gateway
+  name: giojavi04/rescatando-tradiciones-web
   branch: master
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
@@ -11,7 +8,10 @@ backend:
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
-local_backend: false
+local_backend: true
+site_url: https://rescatandotradiciones.org
+display_url: https://rescatandotradiciones.org
+auth_endpoint: https://rescatandotradiciones.org
 locale: "es"
 publish_mode: editorial_workflow
 media_folder: static/img
