@@ -1,5 +1,6 @@
 backend:
-  name: giojavi04/rescatando-tradiciones-web
+  name: git-gateway
+  repo: giojavi04/rescatando-tradiciones-web
   branch: master
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
