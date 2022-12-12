@@ -9,9 +9,15 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-K47C72JZYR",
+        trackingIds: [
+          "G-K47C72JZYR", // Google Analytics / GA
+        ],
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
       },
     },
     "gatsby-plugin-react-helmet",
