@@ -8,15 +8,17 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        exclude: ["/admin"],
+      },
+    },
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          "G-K47C72JZYR", // Google Analytics / GA
-        ],
+        trackingIds: ["G-K47C72JZYR"],
         pluginConfig: {
-          // Puts tracking script in the head instead of the body
           head: true,
         },
       },
